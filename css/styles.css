@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);
+    background: #4c95fb;
 }
 
 .navbar {
@@ -11,7 +11,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
-    background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);
+    background: #4c95fb;
 }
 
 .navbar img {
@@ -19,12 +19,6 @@ body {
     height: 36px;
     flex-shrink: 0;
     cursor: pointer;
-}
-
-.logo {
-    width: 133px;
-    height: 68px;
-    flex-shrink: 0;
 }
 
 .boton {
@@ -49,49 +43,86 @@ body {
 
 .layers {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    /* Ajusta la altura según tu diseño */
+    width: 100vw; 
 }
-
-.layer {
-    background-size: cover;
-    background-position: center;
+.layer{
+    position: absolute;
 }
 
 .layer-1 {
     position: absolute;
     width: 100%;
-    height: 100%;
-    background-image: url('../images/layers/Capa1.png');
     z-index: 1;
 }
 
 .layer-2 {
     position: absolute;
-    width: 25%;
-    height: 100%;
+    width: 30%;
+    margin-top: 4.5%;
     z-index: 2;
-    margin-top: 63px;
-    filter: blur(3.5px);
 }
 
 .layer-3 {
     position: absolute;
-    width: 50%;
-    height: 80%;
-    z-index: 3;
-    margin-top: 375px;
-    margin-left: 470px;
-    filter: blur(3.5px);
+    width: 43%;
+    margin-top: 39.3%;
+    margin-left: 29%;
+    z-index: 2;
 }
 
-.layer-4{
+.layer-4 {
     position: absolute;
-    width: 87%;
-    height: 80%;
-    z-index: 4;
-    margin-top: 210px;
-    margin-left: 900px;
-    filter: blur(3.5px); 
+    width: 30%;
+    margin-left: 70%;
+    z-index: 2;
 }
+
+.titulo {
+    position: absolute;
+    width: 40%;
+    margin-left: 30%;
+    z-index: 3;
+}
+
+.gwen{
+    width: 26%;
+    margin-top: 23%;
+    margin-left: 6%;
+    z-index: 3;
+}
+
+.spidey{
+    width: 35%;
+    margin-top: 25%;
+    margin-left: 31%;
+    z-index: 3;
+}
+
+.miles {
+    width: 27%;
+    margin-top: 20%;
+    margin-left: 53%;
+    z-index: 2;
+}
+
+.tela{
+    width: 53%; 
+    margin-top: 25%;
+    margin-left: -10%;
+    z-index: 3;
+}
+
+.tela-2{
+    width: 53%;
+    margin-top: 14%;
+    margin-left: 72%;
+    z-index: 3;
+}
+
+.secVioleta{
+    position: absolute;
+    width: 100%;
+    margin-top: 51%;
+    z-index: 2;
+}
+
