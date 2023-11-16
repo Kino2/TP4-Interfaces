@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);
+}
+
+.navbar {
+    width: auto;
+    height: 103px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);
+}
+
+.navbar img {
+    width: 70px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.logo {
+    width: 133px;
+    height: 68px;
+    flex-shrink: 0;
+}
+
+.boton {
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 111px;
+    border: 8px solid var(--2982-ff, #2982FF);
+    background: #FFE901;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    cursor: pointer;
+}
+
+.boton h4 {
+    margin: auto;
+    color: #02187E;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%;
+}
+
+.layers {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Ajusta la altura según tu diseño */
+}
+
+.layer {
+    background-size: cover;
+    background-position: center;
+}
+
+.layer-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/layers/Capa1.png');
+    z-index: 1;
+}
+
+.layer-2 {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    z-index: 2;
+    margin-top: 63px;
+    filter: blur(3.5px);
+}
+
+.layer-3 {
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    z-index: 3;
+    margin-top: 375px;
+    margin-left: 470px;
+    filter: blur(3.5px);
+}
+
+.layer-4{
+    position: absolute;
+    width: 87%;
+    height: 80%;
+    z-index: 4;
+    margin-top: 210px;
+    margin-left: 900px;
+    filter: blur(3.5px); 
+}
