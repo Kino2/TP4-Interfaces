@@ -49,6 +49,7 @@ body {
 .layers {
     position: relative;
     width: 100vw;
+    height: auto;
 }
 
 .layer {
@@ -131,17 +132,67 @@ body {
     z-index: 2;
 }
 
-#juego1{
-    width: 60%;
-    margin-top: 92%;
+#secBlanco {
+    width: 100%;
+    margin-top: 105%;
+    z-index: 1;
+}
+
+#juego1 {
+    width: 57%;
+    margin-top: 85%;
     margin-left: 7%;
     z-index: 3;
 }
 
 #duende {
-    width: 45%;
-    margin-top: 58.5%;
-    margin-left: 54.5%;
+    width: 39%;
+    margin-top: 60.5%;
+    margin-left: 54%;
+    z-index: 4;
+}
+
+.rutas {
+    margin-left: 2%;
+}
+
+#ruta1 {
+    width: 47%;
+    z-index: 4;
+    margin-top: 156%;
+}
+
+#ruta2 {
+    width: 47%;
+    z-index: 4;
+    margin-top: 167%;
+}
+
+#ruta3 {
+    width: 47%;
+    z-index: 4;
+    margin-top: 182.3%;
+    margin-left: 1%;
+}
+#rectGwen{
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    margin-top: 165%;
+}
+#secNegro{
+    position: absolute;
+    width: 100%;
+    margin-top: 202%;
+    z-index: 3;
+}
+#titVengadores{
+    position: absolute;
+    color: white;
+    width: 25%;
+    font-size: 60px;
+    margin-left: 5%;
+    margin-top: 225%;
     z-index: 3;
 }
 .titulo {
@@ -159,4 +210,34 @@ body {
 
 .titulo p {
     font-size: 24.5px;
+}
+
+.contenedorRecuadros {
+    display: flex;
+
+    margin-top: 130%;
+    margin-left: 10%;
+    z-index: 2;
+}
+
+.imagen-con-texto {
+    display: flex;
+    width: 25%;
+    margin: 0px 40px;
+    flex-direction: column;
+}
+
+.imagen-con-texto p {
+    font-size: 18px;
+}
+
+.fondo{
+    margin:0px 200px 0 200px
+}
+
+#cielo{
+    position: absolute;
+    width: 60%;
+    margin-top: 240%;
+    z-index: 3;
 }
