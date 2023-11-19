@@ -47,7 +47,6 @@ body {
 }
 
 .layers {
-    position: relative;
     width: 100vw;
     height: auto;
 }
@@ -57,103 +56,98 @@ body {
 }
 
 #layer-1 {
-    position: absolute;
     width: 100%;
     z-index: 1;
 }
 
 #layer-2 {
-    position: absolute;
     width: 30%;
-    margin-top: 4.5%;
+    top: 20.5%;
     z-index: 2;
 }
 
 #layer-3 {
-    position: absolute;
     width: 43%;
-    margin-top: 39.3%;
-    margin-left: 29%;
+    top: 92.3%;
+    left: 29%;
     z-index: 2;
 }
 
 #layer-4 {
-    position: absolute;
     width: 30%;
-    margin-left: 70%;
+    left: 70%;
     z-index: 2;
 }
 
 #titulo {
-    position: absolute;
     width: 40%;
-    margin-left: 30%;
+    left: 30%;
     z-index: 3;
 }
 
 #gwen {
     width: 26%;
-    margin-top: 23%;
-    margin-left: 6%;
+    top: 58%;
+    left: 6%;
     z-index: 3;
 }
 
 #spidey {
     width: 35%;
-    margin-top: 23%;
-    margin-left: 31%;
+    top: 58%;
+    left: 31%;
     z-index: 3;
 }
 
 #miles {
     width: 27%;
-    margin-top: 20%;
-    margin-left: 53%;
+    top: 52%;
+    left: 53%;
     z-index: 2;
 }
 
 #tela {
     width: 57%;
-    margin-top: 21%;
-    margin-left: -13%;
+    top: 54%;
+    left: -13%;
     z-index: 3;
 }
 
 #tela-2 {
     width: 35%;
-    margin-top: 22%;
-    margin-left: 73%;
+    top: 56%;
+    left: 73%;
     z-index: 3;
 }
 
 #secVioleta {
     width: 100%;
-    margin-top: 51%;
+    top: 116%;
     z-index: 2;
 }
 
 #secBlanco {
     width: 100%;
-    margin-top: 105%;
+    top: 185%;
     z-index: 1;
 }
 
 #juego1 {
     width: 57%;
-    margin-top: 85%;
-    margin-left: 7%;
+    top: 188%;
+    left: 7%;
     z-index: 3;
 }
 
 #duende {
     width: 39%;
-    margin-top: 60.5%;
-    margin-left: 54%;
+    top: 135.5%;
+    left: 54%;
     z-index: 4;
 }
 
 .rutas {
-    margin-left: 2%;
+    left: 2%;
 }
 
 #ruta1 {
@@ -165,41 +159,42 @@ body {
 #ruta2 {
     width: 47%;
     z-index: 4;
-    margin-top: 167%;
+    top: 354%;
 }
 
 #ruta3 {
     width: 47%;
     z-index: 4;
-    margin-top: 182.3%;
-    margin-left: 1%;
+    top: 380.3%;
+    left: 2%;
 }
-#rectGwen{
-    position: absolute;
+
+#rectGwen {
     width: 100%;
     z-index: 3;
-    margin-top: 165%;
+    top: 350%;
 }
-#secNegro{
+
+#secNegro {
     position: absolute;
     width: 100%;
-    margin-top: 202%;
+    top: 426%;
     z-index: 3;
 }
-#titVengadores{
-    position: absolute;
-    color: white;
+
+#titVengadores {
     width: 25%;
+    color: white;
     font-size: 60px;
-    margin-left: 5%;
-    margin-top: 225%;
+    top: 469%;
     z-index: 3;
 }
+
 .titulo {
     color: white;
     width: 47%;
-    margin-top: 65%;
-    margin-left: 8%;
+    top: 145%;
+    left: 8%;
     z-index: 3;
 }
 
@@ -214,30 +209,101 @@ body {
 
 .contenedorRecuadros {
     display: flex;
-
-    margin-top: 130%;
-    margin-left: 10%;
+    top: 270%;
+    left: 10%;
     z-index: 2;
 }
 
-.imagen-con-texto {
+.descripcion {
     display: flex;
     width: 25%;
     margin: 0px 40px;
     flex-direction: column;
 }
 
-.imagen-con-texto p {
+.descripcion p {
     font-size: 18px;
 }
 
-.fondo{
-    margin:0px 200px 0 200px
+.fondo {
+    margin: 240% 200px 0 200px;
 }
 
-#cielo{
+.contenedorDemos {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    gap: 20px;
+    top: 600%;
+    left: 10%;
+    z-index: 4;
+}
+
+.demo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.demo img {
+    max-width: 100%;
+    margin-bottom: 100px;
+    height: auto;
+}
+
+.info {
+    width: 45%;
+    margin-left: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cielo {
     position: absolute;
-    width: 60%;
-    margin-top: 240%;
     z-index: 3;
+}
+
+#pasto {
+    position: absolute;
+    z-index: 4;
+}
+
+#paisaje {
+    position: absolute;
+    z-index: 3;
+}
+
+.fondo #cielo,
+#pasto,
+#paisaje {
+    width: 80%;
+    height: 744px
+}
+
+.vengadores {
+    top: 400%;
+}
+
+#vengador1 {
+    width: 43%;
+    top: 490%;
+    left: 13%;
+    z-index: 3;
+}
+
+#vengador2 {
+    width: 35%;
+    top: 467%;
+    left: 45%;
+    z-index: 3;
+}
+
+#vengador3 {
+    width: 37%;
+    top: 516%;
+    left: 60%;
+    z-index: 3;
+}
+
+#secBlanco2 {
+    width: 100%;
 }
