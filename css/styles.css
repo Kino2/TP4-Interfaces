@@ -311,42 +311,162 @@ body {
     margin-left: 24%;
 }
 
-.parrafoYBoton{
+.parrafoYBoton {
     width: 50%;
     margin-top: 10%;
     margin-bottom: 8%;
 }
-.parrafoYBoton h1{
+
+.parrafoYBoton h1 {
     color: white;
     font-size: 60px;
 }
-.parrafoYBoton .boton{
+
+.parrafoYBoton .boton {
     width: 36%;
     height: 60px;
 }
 
-#secBlanco3{
+#secBlanco3 {
     width: 100%;
     top: 877%;
     z-index: 1;
 }
-.personajes{
+
+.personajes {
     position: absolute;
     top: 910%;
     left: 20%;
 }
 
-#gwen2{
+#gwen2 {
     width: 380px;
     z-index: 3;
 }
-#spidey2{
+
+#spidey2 {
     width: 550px;
     z-index: 3;
     left: 275px;
 }
-#miles2{
+
+#miles2 {
     width: 420px;
     left: 800px;
     z-index: 3;
+}
+
+.fondoPreFooter {
+    width: 100%;
+    height: 1712px;
+    background: linear-gradient(0deg, #F7E3D8 21.2%, #8FBEFC 81.48%);
+    top: 992%;
+}
+
+.title {
+    position: absolute;
+    width: 50%;
+    display: flex;
+    top: 5%;
+    left: 27%;
+    flex-direction: column;
+}
+
+.title h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.suscripcion{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+.sub {
+    width: 75%;
+    height: 85px;
+    font-size: 18px;
+    border-radius: 50px 0px 0px 50px;
+    border-top: 9px solid #2982FF;
+    border-bottom: 9px solid #2982FF;
+    border-left: 9px solid #2982FF;
+    background: #FFF;
+    box-shadow: 0px 5px 0px 0px #02187E;
+}
+.sub::placeholder{
+    position: absolute;
+    left: 5%;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+.btnSub {
+    width: 25%;
+    height: 105px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 0px 50px 50px 0px;
+    border: 9px solid #2982FF;
+    background: #FFE901;
+    box-shadow: 0px 5px 0px 0px #02187E;
+}
+.advertencias {
+    display: flex;
+    flex-direction: column;
+}
+.advertencias p{
+    width: 75%;
+    font-size: 25px;
+    margin: 38px 60px;
+}
+.advertencias img{
+    width: 30%;
+    margin-left: 6%;
+}
+
+.subrayado{
+    text-decoration: underline;
+}
+#edificios{
+    width: 100%;
+    /* height: 2000px; */
+    margin-top: 34%;
+}
+#miles2D{
+    width: 6.5%;
+    top: 87%;
+    left: 17.3%;
+}
+#gwen2D{
+    width: 4%;
+    right: 54%;
+    top: 81%;
+}
+#spidey2D{
+    width: 6%;
+    top: 73%;
+    right: 16%;
+}
+
+.fondoConsolas{
+    display: flex;
+    width: 100%;
+    background: #242424;
+    height: 75px;
+    justify-content: center;
+}
+.fondoDerechosYRedes{
+    background: #5E5E5D;
+    height: 830px;
+}
+.derechosYRedes{
+    width: 54.3%;
+    letter-spacing: 3px;
+    font-size: 24px;
+    left: 21%;
+    top: 106%;
+    color: white;
+}
+#redes{
+    margin-top: 2%;
 }
