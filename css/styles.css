@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-
+/*Estilos generales para el cuerpo de la página*/
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
 }
 
+/*Barra de navegación*/
 .navbar {
     width: auto;
     height: 103px;
@@ -19,6 +20,7 @@ body {
     background: #4c95fb;
 }
 
+/*Botón hamburguesa*/
 .navbar img {
     width: 70px;
     height: 36px;
@@ -26,6 +28,7 @@ body {
     cursor: pointer;
 }
 
+/*Boton de Comprar*/
 .boton {
     width: 200px;
     height: 50px;
@@ -46,6 +49,7 @@ body {
     line-height: 94.5%;
 }
 
+/*Capas*/
 .layers {
     width: 100vw;
     height: auto;
@@ -55,36 +59,39 @@ body {
     position: absolute;
 }
 
-#layer-1 {
+/*Edificios*/
+#layer1 {
     width: 100%;
     z-index: 1;
 }
 
-#layer-2 {
+#layer2 {
     width: 30%;
     top: 20.5%;
     z-index: 2;
 }
 
-#layer-3 {
+#layer3 {
     width: 43%;
     top: 92.3%;
     left: 29%;
     z-index: 2;
 }
 
-#layer-4 {
+#layer4 {
     width: 30%;
     left: 70%;
     z-index: 2;
 }
 
+/*Titulo del juego*/
 #titulo {
     width: 40%;
     left: 30%;
     z-index: 3;
 }
 
+/*Spidermans*/
 #gwen {
     width: 26%;
     top: 58%;
@@ -106,6 +113,7 @@ body {
     z-index: 2;
 }
 
+/*Telarañas*/
 #tela {
     width: 57%;
     top: 54%;
@@ -120,17 +128,30 @@ body {
     z-index: 3;
 }
 
+/*Parte con fondo violeta*/
 #secVioleta {
     width: 100%;
     top: 116%;
     z-index: 2;
 }
 
-#secBlanco {
-    width: 100%;
-    top: 185%;
-    z-index: 1;
+.titulo {
+    color: white;
+    width: 47%;
+    top: 145%;
+    left: 8%;
+    z-index: 3;
 }
+
+.titulo h1 {
+    font-size: 70px;
+    margin: auto;
+}
+
+.titulo p {
+    font-size: 24.5px;
+}
+
 
 #juego1 {
     width: 57%;
@@ -144,6 +165,38 @@ body {
     top: 135.5%;
     left: 54%;
     z-index: 4;
+}
+
+/*Parte con fondo blanco*/
+#secBlanco {
+    width: 100%;
+    top: 185%;
+    z-index: 1;
+}
+
+.contenedorRecuadros {
+    display: flex;
+    top: 270%;
+    left: 10%;
+    z-index: 2;
+}
+
+.descripcion {
+    display: flex;
+    width: 25%;
+    margin: 0px 40px;
+    flex-direction: column;
+}
+
+.descripcion p {
+    font-size: 18px;
+}
+
+/*Parte con fondo de Gwen*/
+#rectGwen {
+    width: 100%;
+    z-index: 3;
+    top: 350%;
 }
 
 .rutas {
@@ -169,17 +222,17 @@ body {
     left: 2%;
 }
 
-#rectGwen {
-    width: 100%;
-    z-index: 3;
-    top: 350%;
-}
-
+/*Parte con fondo negro*/
 #secNegro {
     position: absolute;
     width: 100%;
     top: 426%;
     z-index: 3;
+}
+
+/*Contenedor de la seccion de vengadores*/
+.fondo {
+    margin: 240% 200px 0 200px;
 }
 
 #titVengadores {
@@ -190,46 +243,7 @@ body {
     z-index: 3;
 }
 
-.titulo {
-    color: white;
-    width: 47%;
-    top: 145%;
-    left: 8%;
-    z-index: 3;
-}
-
-.titulo h1 {
-    font-size: 70px;
-    margin: auto;
-}
-
-.titulo p {
-    font-size: 24.5px;
-}
-
-.contenedorRecuadros {
-    display: flex;
-    top: 270%;
-    left: 10%;
-    z-index: 2;
-}
-
-.descripcion {
-    display: flex;
-    width: 25%;
-    margin: 0px 40px;
-    flex-direction: column;
-}
-
-.descripcion p {
-    font-size: 18px;
-}
-
-.fondo {
-    margin: 240% 200px 0 200px;
-}
-
-
+/*Capas del fondo de los vengadores*/
 #cielo {
     position: absolute;
     z-index: 3;
@@ -252,6 +266,7 @@ body {
     height: 744px
 }
 
+/*Capas de los vengadores*/
 .vengadores {
     top: 400%;
 }
@@ -277,6 +292,7 @@ body {
     z-index: 3;
 }
 
+/*Segunda parte con fondo blanco*/
 #secBlanco2 {
     width: 100%;
 }
@@ -300,17 +316,18 @@ body {
     height: auto;
 }
 
-.info h1 {
-    font-size: 47px;
-    font-weight: 100;
-}
-
 .info {
     width: 60%;
     font-size: 24px;
     margin-left: 24%;
 }
 
+.info h1 {
+    font-size: 47px;
+    font-weight: 100;
+}
+
+/*Segunda parte con fondo negro*/
 .parrafoYBoton {
     width: 50%;
     margin-top: 10%;
@@ -327,12 +344,14 @@ body {
     height: 60px;
 }
 
+/*Tercera parte con fondo blanco*/
 #secBlanco3 {
     width: 100%;
     top: 877%;
     z-index: 1;
 }
 
+/*Otras capas de spidermans*/
 .personajes {
     position: absolute;
     top: 910%;
@@ -356,6 +375,7 @@ body {
     z-index: 3;
 }
 
+/*Otro fondo con edificios*/
 .fondoPreFooter {
     width: 100%;
     height: 1712px;
@@ -377,12 +397,14 @@ body {
     text-align: center;
 }
 
-.suscripcion{
+/*Input para suscribirse*/
+.suscripcion {
     display: flex;
     width: 100%;
     justify-content: center;
     margin: 0;
 }
+
 .sub {
     width: 75%;
     height: 85px;
@@ -394,12 +416,14 @@ body {
     background: #FFF;
     box-shadow: 0px 5px 0px 0px #02187E;
 }
-.sub::placeholder{
+
+.sub::placeholder {
     position: absolute;
     left: 5%;
     letter-spacing: 3px;
     font-size: 18px;
 }
+
 .btnSub {
     width: 25%;
     height: 105px;
@@ -410,56 +434,69 @@ body {
     background: #FFE901;
     box-shadow: 0px 5px 0px 0px #02187E;
 }
+
 .advertencias {
     display: flex;
     flex-direction: column;
 }
-.advertencias p{
+
+.advertencias p {
     width: 75%;
     font-size: 25px;
     margin: 38px 60px;
 }
-.advertencias img{
+
+.advertencias img {
     width: 30%;
     margin-left: 6%;
 }
 
-.subrayado{
+.subrayado {
     text-decoration: underline;
 }
-#edificios{
+
+/*Capas para el nuevo fondo con edificios*/
+#edificios {
     width: 100%;
     /* height: 2000px; */
     margin-top: 34%;
 }
-#miles2D{
+
+/*Capas de spidermans en 2D*/
+#miles2D {
     width: 6.5%;
     top: 87%;
     left: 17.3%;
 }
-#gwen2D{
+
+#gwen2D {
     width: 4%;
     right: 54%;
     top: 81%;
 }
-#spidey2D{
+
+#spidey2D {
     width: 6%;
     top: 73%;
     right: 16%;
 }
 
-.fondoConsolas{
+/*Fondo donde se encuentran las consolas que corren el juego*/
+.fondoConsolas {
     display: flex;
     width: 100%;
     background: #242424;
     height: 75px;
     justify-content: center;
 }
-.fondoDerechosYRedes{
+
+/*Fondo de los derechos legales y las redes sociales*/
+.fondoDerechosYRedes {
     background: #5E5E5D;
     height: 830px;
 }
-.derechosYRedes{
+
+.derechosYRedes {
     width: 54.3%;
     letter-spacing: 3px;
     font-size: 24px;
@@ -467,6 +504,7 @@ body {
     top: 106%;
     color: white;
 }
-#redes{
+
+#redes {
     margin-top: 2%;
 }
