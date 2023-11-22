@@ -57,6 +57,7 @@ body {
 
 /*Capas*/
 .primerFondo {
+    overflow-x: hidden;
     width: 1280px;
     height: 799px;
     position: relative;
