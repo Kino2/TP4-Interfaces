@@ -37,8 +37,8 @@ body {
 /*Botón hamburguesa*/
 .navbar img {
     width: 70px;
-    height: 36px;
-    margin-left: 100px;
+    height: 42px;
+    margin-left: 90px;
     flex-shrink: 0;
     cursor: pointer;
 }
@@ -47,7 +47,7 @@ body {
 .boton {
     width: 200px;
     height: 50px;
-    margin-right: 100px;
+    margin-right: 104px;
     flex-shrink: 0;
     border-radius: 111px;
     border: 8px solid var(--2982-ff, #2982FF);
@@ -155,7 +155,7 @@ body {
     color: white;
     width: 47%;
     top: 104%;
-    left: 7%;
+    left: 8%;
     z-index: 3;
 }
 
@@ -172,13 +172,13 @@ body {
 
 #juego1 {
     top: 144%;
-    left: 6%;
+    left: 7.3%;
     z-index: 3;
 }
 
 #duende {
     top: 96%;
-    left: 55%;
+    left: 57%;
     z-index: 4;
 }
 
@@ -192,14 +192,14 @@ body {
 .contenedorRecuadros {
     display: flex;
     top: 213%;
-    left: 4%;
+    left: 5.2%;
     z-index: 2;
 }
 
 .descripcion {
     display: flex;
-    width: 25%;
-    margin: 0px 36px;
+    width: 26.2%;
+    margin: 0px 33px;
     flex-direction: column;
 }
 
@@ -305,7 +305,7 @@ body {
 
 .contenedorDemos {
     top: 480%;
-    left: 10%;
+    left: 100px;
     z-index: 4;
 }
 
@@ -325,19 +325,19 @@ body {
 
 .info {
     font-weight: 100;
-    margin-left: 30px;
+    margin-left: 57px;
+    margin-right: 100px;
 
 }
 
 .info h1 {
-    font-size: 40px;
+    font-size: 37px;
     font-weight: 100;
     line-height: 94.5%;
     /* 37.8px */
 }
 
 .info p {
-    width: 81.3%;
     font-size: 20px;
 }
 
