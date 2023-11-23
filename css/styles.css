@@ -9,9 +9,19 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
 }
-
+.lineaContainer{
+    border: solid red 2px;
+    z-index: 1000;
+    position: absolute;
+    width: 1080px;
+    height: 95vh;
+    margin: auto;
+}
 .container {
-    max-width: 1080px;
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*Barra de navegación*/
