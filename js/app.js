@@ -1,4 +1,4 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var titulo = document.getElementById('titulo');
     var navbar = document.querySelector('.navbar');
     var scrollPosition = window.scrollY;
@@ -17,7 +17,7 @@ window.addEventListener('scroll', function() {
 });
 
 //Punto 6 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var duendeVerde = document.getElementById('duende');
     var initialPosition = 600; // Posición inicial del duende
     var targetPosition = 768; // Posición a la que quieres que el duende llegue al hacer scroll
@@ -39,49 +39,44 @@ window.addEventListener('scroll', function() {
     duendeVerde.style.top = newPosition + 'px';
 });
 
+//Punto 7
+const logo = document.getElementById('titulo');
+const layer2 = document.getElementById('layer2');
+const layer3 = document.getElementById('layer3');
+const layer4 = document.getElementById('layer4');
+const gwen = document.getElementById('gwen');
+const spidey = document.getElementById('spidey');
+const miles = document.getElementById('miles');
+const tela = document.getElementById('tela');
+const tela2 = document.getElementById('tela2');
+const layers = [logo, layer2, layer3, layer4, gwen, spidey, miles, tela, tela2];
+const cargarElem = () => {
+    layers.forEach((c, index) => {
+        c.style.transition = `opacity 0.5s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
+        c.style.opacity = '1';
+    });
+};
+// Llama a la función después de 1 segundo
+setTimeout(cargarElem, 500);
+
+
+const layerss = document.querySelectorAll('.layerInicial');
+
+window.addEventListener('scroll', () => {
+    layerss.forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
+        layer.style.transform = `translateY(-${window.scrollY * speed}px)`;
+    });
+});
+
+
 
 //Punto 9
 document.addEventListener("scroll", () => {
-    if (window.scrollY > 1350)  { //Si la altura en Y es mayor a 1350, realizo la animacion en las cards
-      document.querySelector("#card1").classList.add("animacionCard");
-      document.querySelector("#card2").classList.add("animacionCard");
-      document.querySelector("#card3").classList.add("animacionCard");
+    if (window.scrollY > 1350) { //Si la altura en Y es mayor a 1350, realizo la animacion en las cards
+        document.querySelector("#card1").classList.add("animacionCard");
+        document.querySelector("#card2").classList.add("animacionCard");
+        document.querySelector("#card3").classList.add("animacionCard");
     }
-  });
-
-
-
-
-const personajes = document.querySelector('.personajes');
-const imgs = personajes.querySelectorAll('img');
-
-// Manejar el evento mouseover para cada imagen
-imgs.forEach(img => {
-    img.addEventListener('mouseover', function () {
-        // Remover la clase 'highlight' de todas las imágenes
-        imgs.forEach(img => img.classList.remove('highlight'));
-
-        // Agregar la clase 'highlight' a la imagen sobre la que se pasa el ratón
-        this.classList.add('highlight');
-
-        // Ajustar el tamaño y el desenfoque de las otras imágenes
-        imgs.forEach(otherImg => {
-            if (otherImg !== this) {
-                otherImg.style.transform = 'scale(0.8)'; // Reducir el tamaño
-                otherImg.style.filter = 'blur(4px)'; // Aplicar un desenfoque
-            } else {
-                this.style.transform = 'scale(1.2)'; // Aumentar el tamaño de la imagen actual
-                this.style.filter = 'blur(0)'; // Quitar el desenfoque de la imagen actual
-            }
-        });
-    });
-
-    // Restaurar las imágenes a su estado original al sacar el ratón
-    img.addEventListener('mouseleave', function () {
-        imgs.forEach(img => {
-            img.classList.remove('highlight');
-            img.style.transform = 'scale(1)';
-            img.style.filter = 'blur(0)';
-        });
-    });
 });
+

@@ -20,12 +20,12 @@ body {
     align-items: center;
     background: #4c95fb;
     position: sticky;
+    z-index: 2000;
     transition: top 0.3s ease-in-out;
-    z-index: 1000;
 }
 
 /*Botón hamburguesa*/
-.navbar img {
+.navbar .hamburguesa {
     width: 70px;
     height: 42px;
     margin-left: 90px;
@@ -33,6 +33,24 @@ body {
     cursor: pointer;
 }
 
+.navbar .cruz {
+    width: 48px;
+    height: 44px;
+    margin-left: -69%; /* Ajusta este valor según sea necesario */
+    opacity: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: opacity 0.5s ease; /* Agrega una transición suave */
+}
+
+.cruz.mostrar {
+    opacity: 1; /* Clase para mostrar la cruz */
+    transition: opacity 0.5s ease; /* Agrega la misma transición */
+}
+.ocultar {
+    opacity: 0; /* Establecemos la opacidad a 0 para ocultar la hamburguesa */
+    pointer-events: none; /* Desactivamos eventos en la hamburguesa para que no sea clickeable */
+}
 /*Boton de Comprar*/
 .boton {
     width: 200px;
@@ -68,9 +86,15 @@ body {
     height: 799px;
     position: relative;
 }
-
+.layerInicial{
+    position: absolute;  
+}
 .layer {
     position: absolute;
+    
+}
+.invisible{
+    opacity: 0;
 }
 
 /*Edificios*/
@@ -106,7 +130,7 @@ body {
 
 /*Spidermans*/
 #gwen {
-    top: 31%;
+    top: 30%;
     left: 7%;
     z-index: 3;
 }
@@ -391,29 +415,20 @@ body {
     left: 17%;
 }
 
-.gwen2{
 
-}
 .spidey2{
     left: 15%;
 }
 .miles2{
     left: 45%;
 }
-.gwen2, .spidey2, .miles2 { /* Ajusta el tamaño según sea necesario */
-    height: auto;
+
+.gwen2, .spidey2, .miles2 {
     cursor: pointer;
     z-index: 3;
     transition: all 0.3s ease;
 }
-.gwen2:hover, .spidey2:hover, .miles2:hover {
-    transform: scale(1.2); /* Aumenta el tamaño al pasar el ratón */
-    filter: blur(4px); /* Aplica un desenfoque */
-}
 
-.gwen2.highlight, .spidey2.highlight, .miles2.highlight {
-    z-index: 1; /* Cambia el z-index para resaltar */
-}
 /*Otro fondo con edificios*/
 .fondoPreFooter {
     width: 1280px;
