@@ -12,18 +12,40 @@ body {
 
 
 /*Barra de navegación*/
+
 .navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
     width: 1280px;
     height: 120px;
+    background: #4c95fb;
+    z-index: 2000;
+    transition: top 0.3s ease;
+}
+
+.navbarContainer {
+    width: 1080px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #4c95fb;
-    position: sticky;
-    z-index: 2000;
-    transition: top 0.3s ease-in-out;
+    margin: auto;
 }
 
+.navbarContainer > * {
+    flex: 1;
+}
+
+.navbarMedio {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+}
+.navbarDerecha {
+    display: flex;
+    justify-content: end;
+}
 /*Botón hamburguesa*/
 .navbar .hamburguesa {
     width: 70px;
@@ -33,20 +55,6 @@ body {
     cursor: pointer;
 }
 
-.navbar .cruz {
-    width: 48px;
-    height: 44px;
-    margin-left: -69%; /* Ajusta este valor según sea necesario */
-    opacity: 0;
-    flex-shrink: 0;
-    cursor: pointer;
-    transition: opacity 0.5s ease; /* Agrega una transición suave */
-}
-
-.cruz.mostrar {
-    opacity: 1; /* Clase para mostrar la cruz */
-    transition: opacity 0.5s ease; /* Agrega la misma transición */
-}
 .ocultar {
     opacity: 0; /* Establecemos la opacidad a 0 para ocultar la hamburguesa */
     pointer-events: none; /* Desactivamos eventos en la hamburguesa para que no sea clickeable */
@@ -55,14 +63,13 @@ body {
 .boton {
     width: 200px;
     height: 50px;
-    margin-right: 104px;
     flex-shrink: 0;
     border-radius: 111px;
     border: 8px solid var(--2982-ff, #2982FF);
     background: #FFE901;
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 .boton:hover{
     background-color: #fff200;
@@ -82,6 +89,7 @@ body {
 
 /*Capas*/
 .primerFondo {
+    margin-top: 100px;
     width: 1280px;
     height: 799px;
     position: relative;
