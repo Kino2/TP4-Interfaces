@@ -2,7 +2,6 @@
 
 /*Estilos generales para el cuerpo de la página*/
 body {
-    overflow: hidden;
     max-width: 1280px;
     padding: 0;
     font-family: 'Lato', sans-serif;
@@ -10,20 +9,7 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
 }
-.lineaContainer{
-    border: solid red 2px;
-    z-index: 1000;
-    position: absolute;
-    width: 1080px;
-    height: 95vh;
-    margin: auto;
-}
-.container {
-    width: 1280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 /*Barra de navegación*/
 .navbar {
@@ -33,6 +19,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background: #4c95fb;
+    position: sticky;
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 /*Botón hamburguesa*/
@@ -55,8 +44,15 @@ body {
     background: #FFE901;
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
+.boton:hover{
+    background-color: #fff200;
+    transform: scale(1.02);
+}
+.boton h4:hover{
+    color: blue;
+}
 .boton h4 {
     margin: auto;
     color: #02187E;
@@ -68,7 +64,6 @@ body {
 
 /*Capas*/
 .primerFondo {
-    overflow-x: hidden;
     width: 1280px;
     height: 799px;
     position: relative;
@@ -178,7 +173,7 @@ body {
 }
 
 #duende {
-    top: 96%;
+    top: 600px;
     left: 57%;
     z-index: 4;
 }
@@ -202,11 +197,30 @@ body {
     width: 26.2%;
     margin: 0px 33px;
     flex-direction: column;
+    opacity: 0; /* Comienza oculto */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
+.descripcion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 .descripcion p {
     font-size: 18.3px;
 }
+#card1{
+    transition-delay: 0s;
+}
+#card2{
+    transition-delay: 0.2s;
+}
+#card3{
+    transition-delay: 0.4s;
+}
+.animacionCard {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 
 /*Parte con fondo de Gwen*/
 #rectGwen {
@@ -400,82 +414,6 @@ body {
 .gwen2.highlight, .spidey2.highlight, .miles2.highlight {
     z-index: 1; /* Cambia el z-index para resaltar */
 }
-.popUp {
-    position: absolute;
-    z-index: 1000;
-    top: 100px;
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    padding: 60px 0px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .popUp.open {
-    position: fixed;
-    z-index: 8;
-    opacity: 1;
-  }
-  .centerPopUp {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 34px;
-  }
-  .imgPopUp {
-    width: 284px;
-    height: auto;
-    background-image: url(./images/layers/PeterParker.png);
-    background-repeat: no-repeat;
-    margin-right: 19px;
-  }
-  .textPopUp {
-    width: 724px;
-    color: #fff;
-    font-family: "LatoRegular";
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .textPopUp h3 {
-    width: 724px;
-    font-size: 60px;
-    margin-bottom: 10px;
-  }
-  .textPopUp p {
-    width: 724px;
-    font-size: 20px;
-  }
-  .punteado {
-    padding-left: 25px;
-    padding-bottom: 40px;
-  }
-  .punteado li {
-    list-style-type: decimal;
-    font-size: 20px;
-  }
-  .boxBtnPopUp {
-    width: 89px;
-    height: 100%;
-  }
-  .closePopUp {
-    width: 89px;
-    height: 89px;
-    background-image: url(images/svg/btnClose.svg);
-  }
-  .closePopUp:hover {
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px white;
-  }
-  .closePopUp:active {
-    scale: 0.9;
-  }
 /*Otro fondo con edificios*/
 .fondoPreFooter {
     width: 1280px;
@@ -486,7 +424,6 @@ body {
 
 .title {
     position: absolute;
-
 }
 
 .title h1 {
