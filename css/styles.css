@@ -54,7 +54,7 @@ body {
     cursor: pointer;
 }
 .hamburguesa rect {
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
     transform-origin: center;
 }
 /* Estilo para la animación de cruz */
@@ -62,6 +62,7 @@ body {
     transform: rotate(45deg) translate(0.5px, 10px);
 }
 .hamburguesa.cruz #barra2 {
+    transition: 0.2s ease;
     opacity: 0;
 }
 .hamburguesa.cruz #barra3 {
@@ -288,11 +289,12 @@ body {
 .cardRuta:hover {
     cursor: pointer;
     scale: 1.1;
+    z-index: 10;
   }
 
 #ruta1 {
     transform: rotate(-13.078deg);
-    top: 270%;
+    top: 275%;
     /* top: 269%; */
     left: 3.7%;
 
@@ -301,7 +303,7 @@ body {
 #ruta2 {
     transform: rotate(-26.474deg);
 
-    top: 287%;
+    top: 298%;
     /* top: 286%; */
     left: 2.8%;
 
@@ -310,7 +312,7 @@ body {
 #ruta3 {
     transform: rotate(-36.016deg);
 
-    top: 309%;
+    top: 325%;
     /* top: 309.5%; */
     left: 5.4%;
 
@@ -372,8 +374,8 @@ body {
 }
 
 #vengador3 {
-    top: 414%;
-    left: 60%;
+    top: 360%;
+    left: 650px;
     z-index: 3;
 }
 
@@ -396,6 +398,7 @@ body {
 .demo {
     display: grid;
     grid-template-columns: auto 1fr;
+    position: re;
 }
 
 .demo img {
@@ -411,6 +414,7 @@ body {
 }
 
 .info h1 {
+    margin-top: 0;
     font-size: 37px;
     font-weight: 100;
     line-height: 94.5%;
@@ -608,4 +612,32 @@ body {
     width: 1280px;
     clip-path: polygon(0 0, 100% 23%, 100% 77%, 0 100%);
     background-color: black;
-}
+}*/
+
+/* Define el tamaño del div que contendrá el personaje */
+.personaje {
+    z-index: 10;
+    position: absolute;
+    width: 70px; /* ajusta el tamaño según tu spritesheet */
+    height: 60px; /* ajusta el tamaño según tu spritesheet */
+    background-image: url('/images/megaspritemiles-removebg-preview.png'); /* reemplaza con la ruta de tu spritesheet */
+    background-repeat: no-repeat; /* ajusta el tamaño para mostrar una única imagen */
+    transition: background-position 0.6s infinite; /* animación suave al cambiar la posición del spritesheet */
+  }
+  
+  /* Define la animación al pasar el mouse por encima */
+  .personaje:hover {
+    animation-name: animacionHover;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes animacionHover {
+    0% { background-position: -40px 0px; } /* posición inicial del spritesheet */
+    25% { background-position: -80px 0px; } /* ajusta la posición para cambiar la imagen */
+    50% { background-position: -160px 0px; }
+    75% { background-position: -240px 0px; }
+    100% { background-position: -320px 0px; }
+  }
+

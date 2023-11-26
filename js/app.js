@@ -76,10 +76,10 @@ const cargarElem = () => {
 setTimeout(cargarElem, 500);
 
 
-const layerss = document.querySelectorAll('.layerInicial');
+const layersIniciales = document.querySelectorAll('.layerInicial');
 
 window.addEventListener('scroll', () => {
-    layerss.forEach(layer => {
+    layersIniciales.forEach(layer => {
         const speed = layer.getAttribute('data-speed');
         layer.style.transform = `translateY(-${window.scrollY * speed}px)`;
     });
@@ -88,26 +88,47 @@ window.addEventListener('scroll', () => {
 
 
 //Punto 9
+const card1 = document.querySelector("#card1");
+const card2 = document.querySelector("#card2");
+const card3 = document.querySelector("#card3");
 document.addEventListener("scroll", () => {
     if (window.scrollY > 1350) { //Si la altura en Y es mayor a 1350, realizo la animacion en las cards
-        document.querySelector("#card1").classList.add("animacionCard");
-        document.querySelector("#card2").classList.add("animacionCard");
-        document.querySelector("#card3").classList.add("animacionCard");
-    }
+        card1.classList.add("animacionCard");
+        card2.classList.add("animacionCard");
+        card3.classList.add("animacionCard");
+    } 
 });
 
 
 //Punto 11
-const rutas = document.querySelector(".rutas");
+// const rutas = document.querySelector(".rutas");
+// const c1 = document.querySelector("#ruta1");
+// const c2 = document.querySelector("#ruta2");
+// const c3 = document.querySelector("#ruta3");
+// window.addEventListener("scroll", function () {
+//     const pos = rutas.getBoundingClientRect(); //devuelve la posicion
+//     const desplazamiento = window.scrollY;
+//     if (pos.top < window.innerHeight && pos.bottom > 0) {
+//       c1.style.transform = `translateY(${269}%) rotate(-13.078deg)`;
+//       c2.style.transform = `translateY(${286}%) rotate(-26.474deg)`;
+//       c3.style.transform = `translateY(${309.5}%) rotate(-36.016deg)`;
+//     }
+//   });
 const c1 = document.querySelector("#ruta1");
 const c2 = document.querySelector("#ruta2");
 const c3 = document.querySelector("#ruta3");
 window.addEventListener("scroll", function () {
-    const pos = rutas.getBoundingClientRect(); //devuelve la posicion
-    const desplazamiento = window.scrollY;
-    if (pos.top < window.innerHeight && pos.bottom > 0) {
-      c1.style.transform = `translateY(${269}%) rotate(-13.078deg)`;
-      c2.style.transform = `translateY(${286}%) rotate(-26.474deg)`;
-      c3.style.transform = `translateY(${309.5}%) rotate(-36.016deg)`;
-    }
-  });
+  const pos = c1.getBoundingClientRect(); //devuelve la posicion
+  const desplazamiento = window.scrollY;
+  if (pos.top < window.innerHeight && pos.bottom > 0) {
+    c1.style.transform = `translateY(${
+      (desplazamiento - pos.top) * 0.027
+    }px) rotate(-13.078deg)`;
+    c2.style.transform = `translateY(${
+      (desplazamiento - pos.top) * 0.027
+    }px) rotate(-26.474deg)`;
+    c3.style.transform = `translateY(${
+      (desplazamiento - pos.top) * 0.007
+    }px) rotate(-36.016deg)`;
+  }
+});
