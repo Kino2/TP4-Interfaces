@@ -265,22 +265,33 @@ body {
     left: 2%;
 }
 
+.cardRuta{
+    position: absolute;
+    background-size: cover;
+    transition: all 0.2s ease-in;
+    z-index: 5;
+}
+.cardRuta:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+
 #ruta1 {
     top: 269%;
     left: 3.7%;
-    z-index: 5;
+
 }
 
 #ruta2 {
     top: 286%;
     left: 2.8%;
-    z-index: 5;
+
 }
 
 #ruta3 {
     top: 309.5%;
     left: 5.4%;
-    z-index: 5;
+
 }
 
 /*Parte con fondo negro*/

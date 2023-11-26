@@ -96,3 +96,24 @@ document.addEventListener("scroll", () => {
     }
 });
 
+
+//Punto 11
+// const rutas = document.querySelector(".rutas");
+// const c1 = document.querySelector("#ruta1");
+// const c2 = document.querySelector("#ruta2");
+// const c3 = document.querySelector("#ruta3");
+// window.addEventListener("scroll", function () {
+//     const pos = rutas.getBoundingClientRect(); //devuelve la posicion
+//     const desplazamiento = window.scrollY;
+//     if (pos.top < window.innerHeight && pos.bottom > 0) {
+//       c1.style.transform = `translateY(${
+//         (desplazamiento - pos.top) * 0.027
+//       }px) rotate(-13.078deg)`;
+//       c2.style.transform = `translateY(${
+//         (desplazamiento - pos.top) * 0.027
+//       }px) rotate(-26.474deg)`;
+//       c3.style.transform = `translateY(${
+//         (desplazamiento - pos.top) * 0.007
+//       }px) rotate(-36.016deg)`;
+//     }
+//   });
