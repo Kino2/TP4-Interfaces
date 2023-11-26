@@ -1,19 +1,8 @@
 //Opcional 2
-document.addEventListener('DOMContentLoaded', function () {
-    const hamburguesa = document.querySelector('.hamburguesa');
-    const cruz = document.querySelector('.cruz');
-
-    hamburguesa.addEventListener('click', function () {
-        hamburguesa.classList.toggle('ocultar');
-        cruz.classList.toggle('mostrar');
-    });
-
-    cruz.addEventListener('click', function () {
-        hamburguesa.classList.toggle('ocultar');
-        cruz.classList.toggle('mostrar');
-    });
+const hamburguesa = document.querySelector('.hamburguesa');
+hamburguesa.addEventListener('click', () => {
+    hamburguesa.classList.toggle('cruz');
 });
-
 
 //Opcional 5
 const fondo = document.getElementById('secBlanco3')

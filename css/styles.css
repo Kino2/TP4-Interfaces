@@ -47,14 +47,26 @@ body {
     justify-content: end;
 }
 /*Botón hamburguesa*/
-.navbar .hamburguesa {
+ .hamburguesa {
     width: 70px;
     height: 42px;
-    margin-left: 90px;
     flex-shrink: 0;
     cursor: pointer;
 }
-
+.hamburguesa rect {
+    transition: all 0.2s ease;
+    transform-origin: center;
+}
+/* Estilo para la animación de cruz */
+.hamburguesa.cruz #barra1 {
+    transform: rotate(45deg) translate(0.5px, 10px);
+}
+.hamburguesa.cruz #barra2 {
+    opacity: 0;
+}
+.hamburguesa.cruz #barra3 {
+    transform: rotate(-45deg) translate(6px, -10px);
+}
 .ocultar {
     opacity: 0; /* Establecemos la opacidad a 0 para ocultar la hamburguesa */
     pointer-events: none; /* Desactivamos eventos en la hamburguesa para que no sea clickeable */
@@ -69,13 +81,15 @@ body {
     background: #FFE901;
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
+}
+.btnAnimado{
     transition: all 0.3s ease;
 }
-.boton:hover{
+.btnAnimado:hover{
     background-color: #fff200;
     transform: scale(1.02);
 }
-.boton h4:hover{
+.btnAnimado h4:hover{
     color: blue;
 }
 .boton h4 {
@@ -259,13 +273,13 @@ body {
     z-index: 4;
     top: 289%;
 }
-
-
 .rutas {
     left: 2%;
 }
 
 .cardRuta{
+    width: 546px;
+    height: 326px;
     position: absolute;
     background-size: cover;
     transition: all 0.2s ease-in;
@@ -277,19 +291,27 @@ body {
   }
 
 #ruta1 {
-    top: 269%;
+    transform: rotate(-13.078deg);
+    top: 270%;
+    /* top: 269%; */
     left: 3.7%;
 
 }
 
 #ruta2 {
-    top: 286%;
+    transform: rotate(-26.474deg);
+
+    top: 287%;
+    /* top: 286%; */
     left: 2.8%;
 
 }
 
 #ruta3 {
-    top: 309.5%;
+    transform: rotate(-36.016deg);
+
+    top: 309%;
+    /* top: 309.5%; */
     left: 5.4%;
 
 }
@@ -480,7 +502,6 @@ body {
 
 .sub {
     width: 75%;
-    height: 85px;
     font-size: 18px;
     border-radius: 50px 0px 0px 50px;
     border-top: 9px solid #2982FF;
