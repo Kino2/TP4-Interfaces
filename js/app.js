@@ -1,35 +1,50 @@
+//Punto 4
+document.addEventListener("scroll", () => {
+    console.log(window.scrollY);
+    function clean() {
+        document.querySelectorAll(".demoImg").forEach((s) => {
+            s.classList.remove("active");
+        });
+        document.querySelectorAll(".info").forEach((s) => {
+            s.classList.remove("active");
+        });
+    }
+    if (window.scrollY < 4000) {
+        clean();
+        document.querySelector("#demoImg1").classList.add("active");
+        document.querySelector("#info1").classList.add("active");
+    }
+    if (window.scrollY > 4000 && window.screenY < 4500) {
+        clean();
+        document.querySelector("#demoImg2").classList.add("active");
+        document.querySelector("#info2").classList.add("active");
+    }
+    if (window.scrollY > 4500 && window.screenY < 5000) {
+        clean();
+        document.querySelector("#demoImg3").classList.add("active");
+        document.querySelector("#info3").classList.add("active");
+    }
+    if (window.scrollY > 5000) {
+        clean();
+        document.querySelector("#demoImg4").classList.add("active");
+        document.querySelector("#info4").classList.add("active");
+    }
+});
 //Punto 5
-// window.addEventListener('scroll', function () {
-//     var titulo = document.getElementById('titulo');
-//     var navbar = document.querySelector('.navbar');
-//     var scrollPosition = window.scrollY;
-//     var navbarHeight = navbar.offsetHeight;
-
-//     // Si el scroll supera la altura de la navbar, ajusta el tamaño y posición del título
-//     if (scrollPosition > navbarHeight/2) {
-//         titulo.style.width = '200px'; // Cambia el ancho a 200px (o el tamaño que desees)
-//         titulo.style.right = '50%'; // Centra horizontalmente
-//         titulo.style.transform = 'translateX(50%) translateY(-50%)'; // Centra verticalmente
-//     } else {
-//         titulo.style.width = '520px'; // Vuelve al ancho original
-//         titulo.style.right = '31%'; // Vuelve a la posición original
-//         titulo.style.transform = 'none'; // Elimina la transformación
-//     }
-// });
-    const navbar = document.querySelector(".navbar");
-    const logoGrande = document.querySelector("#titulo");
-    const logoChico = document.querySelector(".navbarMedio");
-    document.addEventListener("scroll", () => {
+const navbar = document.querySelector(".navbar");
+const logoGrande = document.querySelector("#titulo");
+const logoChico = document.querySelector(".navbarMedio");
+document.addEventListener("scroll", () => {
     if (window.scrollY < 103) {
         logoChico.style.opacity = 0;
     }
     if (window.scrollY > 103) {
         logoChico.style.opacity = window.scrollY / 400;
     }
-        logoGrande.style.opacity = 1 - window.scrollY / 120;
-        const scaleValue = Math.max(1 - window.scrollY / 200, 0.0);
-        logoGrande.style.scale = scaleValue;
-    });
+    logoGrande.style.opacity = 1 - window.scrollY / 120;
+    const scaleValue = Math.max(1 - window.scrollY / 200, 0.0);
+    logoGrande.style.scale = scaleValue;
+});
 
 //Punto 6 
 window.addEventListener('scroll', function () {
@@ -70,7 +85,7 @@ const cargarElem = () => {
         c.style.transition = `opacity 0.5s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
         c.style.opacity = '1';
     });
-    setTimeout(() => {logo.style.transition = ``}, 1000);
+    setTimeout(() => { logo.style.transition = `` }, 1000);
 };
 // Llama a la función después de 1 segundo
 setTimeout(cargarElem, 500);
@@ -96,7 +111,7 @@ document.addEventListener("scroll", () => {
         card1.classList.add("animacionCard");
         card2.classList.add("animacionCard");
         card3.classList.add("animacionCard");
-    } 
+    }
 });
 
 
@@ -118,17 +133,14 @@ const c1 = document.querySelector("#ruta1");
 const c2 = document.querySelector("#ruta2");
 const c3 = document.querySelector("#ruta3");
 window.addEventListener("scroll", function () {
-  const pos = c1.getBoundingClientRect(); //devuelve la posicion
-  const desplazamiento = window.scrollY;
-  if (pos.top < window.innerHeight && pos.bottom > 0) {
-    c1.style.transform = `translateY(${
-      (desplazamiento - pos.top) * 0.027
-    }px) rotate(-13.078deg)`;
-    c2.style.transform = `translateY(${
-      (desplazamiento - pos.top) * 0.027
-    }px) rotate(-26.474deg)`;
-    c3.style.transform = `translateY(${
-      (desplazamiento - pos.top) * 0.007
-    }px) rotate(-36.016deg)`;
-  }
+    const pos = c1.getBoundingClientRect(); //devuelve la posicion
+    const desplazamiento = window.scrollY;
+    if (pos.top < window.innerHeight && pos.bottom > 0) {
+        c1.style.transform = `translateY(${(desplazamiento - pos.top) * 0.027
+            }px) rotate(-13.078deg)`;
+        c2.style.transform = `translateY(${(desplazamiento - pos.top) * 0.027
+            }px) rotate(-26.474deg)`;
+        c3.style.transform = `translateY(${(desplazamiento - pos.top) * 0.007
+            }px) rotate(-36.016deg)`;
+    }
 });

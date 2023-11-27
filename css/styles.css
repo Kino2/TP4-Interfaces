@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+
 /*Estilos generales para el cuerpo de la página*/
 body {
     max-width: 1280px;
@@ -62,8 +63,9 @@ body {
     transform: rotate(45deg) translate(0.5px, 10px);
 }
 .hamburguesa.cruz #barra2 {
-    transition: 0.2s ease;
+    transition: 0.1s ease;
     opacity: 0;
+    stroke-opacity: 0;
 }
 .hamburguesa.cruz #barra3 {
     transform: rotate(-45deg) translate(6px, -10px);
@@ -362,20 +364,20 @@ body {
 }
 
 #vengador1 {
-    top: 390%;
-    left: 9%;
+    top: -94px;
+    left: 26px;
     z-index: 3;
 }
 
 #vengador2 {
-    top: 369%;
-    left: 42%;
+    top: -256px;
+    left: 446px;
     z-index: 3;
 }
 
 #vengador3 {
-    top: 360%;
-    left: 650px;
+    top: 104px;
+    left: 670px;
     z-index: 3;
 }
 
@@ -386,8 +388,10 @@ body {
 }
 
 .contenedorDemos {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 100px;
     top: 480%;
-    left: 100px;
     z-index: 4;
 }
 
@@ -396,21 +400,52 @@ body {
 }
 
 .demo {
-    display: grid;
+    position: relative;
     grid-template-columns: auto 1fr;
-    position: re;
 }
 
-.demo img {
-    margin-bottom: 23%;
+.demoImgsContainer{
+    width: 552px;
+    height: 1650px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  
+}
+
+.demoImgs {
+    width: 100%;
+    height: 302px;
+    position: sticky;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.demoImgs img {
+    position: absolute;
+    width: 552px;
     height: auto;
+    transition: opacity 0.3s ease;
 }
 
-.info {
-    font-weight: 100;
-    margin-left: 57px;
-    margin-right: 100px;
+.demoInfos {
+    position: relative;
+    left: 601px;
+    width: 467px;
+    height: 1650px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+  
+}
 
+.demoInfos .info {
+    font-weight: 100;
+    transition: opacity 0.3s ease;
 }
 
 .info h1 {
@@ -423,6 +458,7 @@ body {
 
 .info p {
     font-size: 20px;
+    margin-bottom: 0;
 }
 
 /*Segunda parte con fondo negro*/
@@ -605,6 +641,14 @@ body {
     margin-top: 2%;
 }
 
+
+.inactive {
+    opacity: 0;
+}
+.active {
+    opacity: 1;
+}
+
 /*.fondoNegro{
     position: absolute;
     z-index: 6;
@@ -614,30 +658,29 @@ body {
     background-color: black;
 }*/
 
-/* Define el tamaño del div que contendrá el personaje */
+/* Variables */
 .personaje {
     z-index: 10;
     position: absolute;
-    width: 70px; /* ajusta el tamaño según tu spritesheet */
-    height: 60px; /* ajusta el tamaño según tu spritesheet */
-    background-image: url('/images/megaspritemiles-removebg-preview.png'); /* reemplaza con la ruta de tu spritesheet */
-    background-repeat: no-repeat; /* ajusta el tamaño para mostrar una única imagen */
-    transition: background-position 0.6s infinite; /* animación suave al cambiar la posición del spritesheet */
-  }
-  
-  /* Define la animación al pasar el mouse por encima */
-  .personaje:hover {
-    animation-name: animacionHover;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  
-  @keyframes animacionHover {
-    0% { background-position: -40px 0px; } /* posición inicial del spritesheet */
-    25% { background-position: -80px 0px; } /* ajusta la posición para cambiar la imagen */
-    50% { background-position: -160px 0px; }
-    75% { background-position: -240px 0px; }
-    100% { background-position: -320px 0px; }
-  }
+    width: 69px;
+    height: 52.8px;
+    background-image: url('/images/megaspritemiles-removebg-preview.png');
+    background-size: cover;
+    background-size: auto 100%;
+    transition: background-position 0.5s steps(6) infinite;
+}
 
+/* Animación al pasar el mouse */
+.personaje:hover {
+    animation-name: animacionHover;
+    animation-timing-function: steps(6);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+  }
+  
+  /* Keyframes */
+  @keyframes animacionHover {
+    0% { background-position: 0px; } /* posición inicial del spritesheet */
+    100% { background-position: -317px; }
+  }

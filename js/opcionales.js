@@ -4,6 +4,41 @@ hamburguesa.addEventListener('click', () => {
     hamburguesa.classList.toggle('cruz');
 });
 
+//Opcional 4
+const cielo = document.getElementById('cielo');
+const pasto = document.getElementById('pasto');
+const paisaje = document.getElementById('paisaje');
+const vengador1 = document.getElementById('vengador1');
+const vengador2 = document.getElementById('vengador2');
+const vengador3 = document.getElementById('vengador3');
+
+document.addEventListener("mousemove", parallaxVengadores);
+
+    function parallaxVengadores(e){
+        //determino el centro de la pantalla
+        let _w = window.innerWidth/2;
+        let _h = window.innerHeight/2;
+
+        //determino posicion del mouse
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+
+        //calculo diferencia de la posicion del mouse respecto del centro de la ventana
+        let desplazamientoX = _mouseX - _w;
+        let desplazamientoY = _mouseY - _h;
+
+
+        //calculo deslpazamiento de cada capa en proporcion al desplazamiento calculado anteriormente
+        cielo.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.01 + 'px, ' + desplazamientoY * 0.01 + 'px, 0px)');
+        pasto.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.01 + 'px, ' + desplazamientoY * 0.01 + 'px, 0px)');
+        paisaje.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.01 + 'px, ' + desplazamientoY * 0.01 + 'px, 0px)');
+        vengador1.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.04 + 'px, ' + desplazamientoY * 0.04 + 'px, 0px)');
+        vengador2.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.05 + 'px, ' + desplazamientoY * 0.05 + 'px, 0px)');
+        vengador3.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.06 + 'px, ' + desplazamientoY * 0.06 + 'px, 0px)');
+
+    }
+
+
 //Opcional 5
 const fondo = document.getElementById('secBlanco3')
 const spidey2 = document.querySelector('.spidey2');
