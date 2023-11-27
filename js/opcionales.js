@@ -46,7 +46,7 @@ const gwen2 = document.querySelector('.gwen2');
 const miles2 = document.querySelector('.miles2');
 
 gwen2.addEventListener('mouseover', function () {
-    fondo.src = "images/svg/FondoGwen.png";
+    fondo.src = "images/fondos/FondoGwen.png";
     gwen2.style.transform = 'scale(1.2)';
     gwen2.style.filter = 'blur(0)';
     spidey2.style.transform = 'scale(0.7)';
@@ -55,7 +55,7 @@ gwen2.addEventListener('mouseover', function () {
     miles2.style.filter = 'blur(5px)';
 });
 spidey2.addEventListener('mouseover', function () {
-    fondo.src = "images/svg/FondoSpidey.png";
+    fondo.src = "images/fondos/FondoSpidey.png";
     spidey2.style.transform = 'scale(1.2)';
     spidey2.style.filter = 'blur(0)';
     gwen2.style.transform = 'scale(0.7)';
@@ -64,7 +64,7 @@ spidey2.addEventListener('mouseover', function () {
     miles2.style.filter = 'blur(5px)';
 });
 miles2.addEventListener('mouseover', function () {
-    fondo.src = "images/svg/FondoMiles.png";
+    fondo.src = "images/fondos/FondoMiles.png";
     miles2.style.transform = 'scale(1.2)';
     miles2.style.filter = 'blur(0)';
     spidey2.style.transform = 'scale(0.7)';
@@ -74,7 +74,7 @@ miles2.addEventListener('mouseover', function () {
 
 });
 function resetFondoYTamanios() {
-    fondo.src = "images/svg/SecBlanco3.svg"; // La ruta original
+    fondo.src = "images/fondos/SecBlanco3.svg"; // La ruta original
     gwen2.style.transform = 'scale(1)';
     gwen2.style.filter = 'none';
     spidey2.style.transform = 'scale(1)';
