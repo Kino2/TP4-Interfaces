@@ -683,32 +683,22 @@ body {
     opacity: 1;
 }
 
-/*.fondoNegro{
-    position: absolute;
-    z-index: 6;
-    height: 430px;
-    width: 1280px;
-    clip-path: polygon(0 0, 100% 23%, 100% 77%, 0 100%);
-    background-color: black;
-}*/
 
 /* Variables */
 .personaje {
     z-index: 10;
     position: absolute;
-    width: 69px;
-    height: 52.8px;
-    background-image: url('/images/megaspritemiles-removebg-preview.png');
-    background-size: cover;
-    background-size: auto 100%;
+    width: 136.3px;
+    height: 170px;
+    background-image: url('/images/milesmorones.png');
     transition: background-position 0.5s steps(6) infinite;
-}
-
-/* Animación al pasar el mouse */
-.personaje:hover {
+  }
+  
+  /* Animación al pasar el mouse */
+  .personaje:hover {
     animation-name: animacionHover;
     animation-timing-function: steps(6);
-    animation-duration: 2s;
+    animation-duration: 1s; /* Reduce la duración para hacer la animación más rápida */
     animation-iteration-count: infinite;
     cursor: pointer;
   }
@@ -716,5 +706,6 @@ body {
   /* Keyframes */
   @keyframes animacionHover {
     0% { background-position: 0px; } /* posición inicial del spritesheet */
-    100% { background-position: -317px; }
+    100% { background-position: -818px; } /* Ajusta esta posición según el tamaño del frame */
   }
+  
