@@ -88,7 +88,7 @@ const cargarElem = () => {
     setTimeout(() => { logo.style.transition = `` }, 1000);
 };
 // Llama a la función después de 1 segundo
-setTimeout(cargarElem, 500);
+setTimeout(cargarElem, 5000);
 
 
 const layersIniciales = document.querySelectorAll('.layerInicial');

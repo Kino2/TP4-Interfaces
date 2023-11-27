@@ -10,7 +10,42 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
 }
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
 
+.loading-logo {
+    width: 20%;
+    height: auto;
+    animation: spinSide 2s linear infinite;
+}
+
+.loading-text {
+    color: #fff;
+    margin: 10px;
+}
+
+
+@keyframes spinSide {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
 
 /*Barra de navegación*/
 

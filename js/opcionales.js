@@ -1,3 +1,38 @@
+//Opcional 1
+window.addEventListener('load', function() {
+    const loadingContainer = document.querySelector(".loading-container");
+    const loadingProgress = document.getElementById("loading-progress");
+
+
+    const cargaTotal = 100;
+    const intervalo = 50; 
+    let progreso = 0;
+
+    document.body.style.overflow = 'hidden'
+
+    const actualizarPorcentaje = () => {
+        progreso++;
+        loadingProgress.textContent = progreso ;
+    };
+
+    const cargarContenidoPrincipal = () => {
+        setTimeout(() => {
+            loadingContainer.style.display = "none"; 
+            document.body.style.overflow = 'auto';
+        }, 5000); 
+
+        const intervaloCarga = setInterval(() => {
+            if (progreso < cargaTotal) {
+                actualizarPorcentaje();
+            } else {
+                clearInterval(intervaloCarga);
+            }
+        }, intervalo);
+    };
+
+    cargarContenidoPrincipal(); 
+});
+
 //Opcional 2
 const hamburguesa = document.querySelector('.hamburguesa');
 hamburguesa.addEventListener('click', () => {
