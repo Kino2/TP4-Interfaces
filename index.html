@@ -10,6 +10,7 @@
 
 <body>
     <main>
+        
         <div class="loading-container">
             <img class="loading-logo" src="images/layers/Araña Loader.png" alt="">
             <div class="loading-text">
@@ -74,9 +75,9 @@
             <div class="primerFondo">
                 <div class="parallax">
                     <img class="layerInicial" id="layer1" src="images/fondos/Cielo.png" alt="Cielo.png">
-                    <img class="layerInicial invisible" id="layer2" src="images/layers/Capa2.svg" alt="Capa2.svg">
-                    <img class="layerInicial invisible" id="layer3" src="images/layers/Capa3.svg" alt="Capa3.svg">
-                    <img class="layerInicial invisible" id="layer4" src="images/layers/Capa4.svg" alt="Capa4.svg">
+                    <img class="layerInicial invisible" id="layer2" data-speed="0.4" src="images/layers/Capa2.svg" alt="Capa2.svg">
+                    <img class="layerInicial invisible" id="layer3" data-speed="0.4" src="images/layers/Capa3.svg" alt="Capa3.svg">
+                    <img class="layerInicial invisible" id="layer4" data-speed="0.4" src="images/layers/Capa4.svg" alt="Capa4.svg">
                     <img class="layerInicial invisible" id="titulo" data-speed="0.6" src="images/layers/Logo.svg"
                         alt="Logo.svg">
                     <img class="layerInicial invisible" id="gwen" data-speed="0.4" src="images/layers/Ghost-Spider.svg"
@@ -143,9 +144,11 @@
                     </div>
                 </section>
                 <div class="rutas">
+                    <div class="cards">
                     <img class="cardRuta" id="ruta1" src="images/juego/ruta1.png" alt="ruta1.png">
                     <img class="cardRuta" id="ruta2" src="images/juego/ruta2.png" alt="ruta2.png">
                     <img class="cardRuta" id="ruta3" src="images/juego/ruta3.png" alt="ruta3.png">
+                </div>
                     <img class="layer" id="rectGwen" src="images/fondos/rectGwen.svg" alt="rectGwen.svg">
                 </div>
                 <div class="fondoNegro">
@@ -162,7 +165,7 @@
                 </div>
                 <img class="layer" id="secBlanco2" src="images/fondos/SecBlanco2.svg" alt="SecBlanco2.svg">
                 <div class="layer contenedorDemos">
-                    <h1 id="titleContenedor">Más amigos, mas diversión</h1>
+                    <h1 id="titleContenedor">Mas amigos, mas diversión</h1>
                     <div class="demo">
                         <div class="demoImgsContainer">
                             <div class="demoImgs">
@@ -285,7 +288,8 @@
                     <div class="personaje" id="miles2D"></div>
                     <!-- <img class="layer" id="miles2D" src="images/layers/Miles2D.svg" alt=""> -->
                     <img class="layer" id="gwen2D" src="images/layers/Gwen2D.svg" alt="Gwen2D.svg">
-                    <img class="layer" id="spidey2D" src="images/layers/Spidey2D.svg" alt="Spidey2D.svg">
+                    <img class="layer imagenSonido" id="spidey2D" src="images/layers/Spidey2D.svg" alt="Spidey2D.svg">
+                    <audio id="audio" src="" preload="auto"></audio>
                     <div class="layer fondoConsolas">
                         <img class="layer" id="consolas" src="images/layers/Consolas.svg" alt="Consolas.svg">
                     </div>

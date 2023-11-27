@@ -84,6 +84,7 @@ const cargarElem = () => {
     layers.forEach((c, index) => {
         c.style.transition = `opacity 0.5s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
         c.style.opacity = '1';
+        c.classList.add('animacion-entrada');
     });
     setTimeout(() => { logo.style.transition = `` }, 1000);
 };
@@ -91,12 +92,20 @@ const cargarElem = () => {
 setTimeout(cargarElem, 5000);
 
 
-const layersIniciales = document.querySelectorAll('.layerInicial');
+const layersSpidey = [logo, gwen, spidey, miles, tela, tela2];
+const layersEdificios = [layer2, layer3, layer4];
 
 window.addEventListener('scroll', () => {
-    layersIniciales.forEach(layer => {
-        const speed = layer.getAttribute('data-speed');
-        layer.style.transform = `translateY(-${window.scrollY * speed}px)`;
+    layersSpidey.forEach((s) => {
+        const speed = s.getAttribute('data-speed');
+        s.style.transform = `translateY(-${window.scrollY * speed}px)`;
+    });
+});
+
+window.addEventListener('scroll', () => {
+    layersEdificios.forEach((e) => {
+        const speed = e.getAttribute('data-speed');
+        e.style.transform = `translateY(${window.scrollY * speed}px)`;
     });
 });
 
@@ -144,3 +153,14 @@ window.addEventListener("scroll", function () {
             }px) rotate(-36.016deg)`;
     }
 });
+
+
+document.querySelector('.imagenSonido').addEventListener('click', function() {
+    reproducirSonido('../images/videoplayback.weba');
+  });
+  
+  function reproducirSonido(rutaSonido) {
+    var audio = document.getElementById('audio');
+    audio.src = rutaSonido;
+    audio.play();
+  }

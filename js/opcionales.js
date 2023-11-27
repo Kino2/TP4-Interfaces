@@ -7,12 +7,22 @@ window.addEventListener('load', function() {
     const cargaTotal = 100;
     const intervalo = 50; 
     let progreso = 0;
+    const audio = new Audio('./audio/Audio Loader.m4a'); // Cambia la ruta al archivo de sonido
+    audio.loop = true; // Para que se repita el sonido
+    audio.volume = 0.2;
+    audio.play(); // Reproducir el sonido
+
 
     document.body.style.overflow = 'hidden'
+    
 
     const actualizarPorcentaje = () => {
         progreso++;
         loadingProgress.textContent = progreso ;
+        if (progreso === cargaTotal) {
+            audio.pause(); // Pausar el sonido cuando la carga llegue al 100%
+            audio.currentTime = 0; // Reiniciar el audio para la próxima reproducción
+        }
     };
 
     const cargarContenidoPrincipal = () => {
