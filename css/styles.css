@@ -106,8 +106,8 @@ body {
     transform: rotate(-45deg) translate(6px, -10px);
 }
 .ocultar {
-    opacity: 0; /* Establecemos la opacidad a 0 para ocultar la hamburguesa */
-    pointer-events: none; /* Desactivamos eventos en la hamburguesa para que no sea clickeable */
+    opacity: 0; 
+    pointer-events: none; /* Desactiva eventos en la hamburguesa para que no sea clickeable */
 }
 /*Boton de Comprar*/
 .boton {
@@ -197,7 +197,7 @@ body {
     z-index: 2;
 }
 
-/*Titulo del juego*/
+/*Logo del juego*/
 #titulo {
     width: 520px;
     right: 31%;
@@ -347,25 +347,20 @@ body {
 #ruta1 {
     transform: rotate(-13.078deg);
     top: 275%;
-    /* top: 269%; */
     left: 3.7%;
 
 }
 
 #ruta2 {
     transform: rotate(-26.474deg);
-
     top: 298%;
-    /* top: 286%; */
     left: 2.8%;
 
 }
 
 #ruta3 {
     transform: rotate(-36.016deg);
-
     top: 325%;
-    /* top: 309.5%; */
     left: 5.4%;
 
 }
@@ -503,7 +498,6 @@ body {
     font-size: 37px;
     font-weight: 100;
     line-height: 94.5%;
-    /* 37.8px */
 }
 
 .info p {

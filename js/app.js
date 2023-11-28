@@ -1,4 +1,5 @@
 //Punto 4
+/*Controla que mostrar o esconder dependiendo de la posicion del scroll en la pagina*/
 document.addEventListener("scroll", () => {
     console.log(window.scrollY);
     function clean() {
@@ -35,41 +36,41 @@ const navbar = document.querySelector(".navbar");
 const logoGrande = document.querySelector("#titulo");
 const logoChico = document.querySelector(".navbarMedio");
 document.addEventListener("scroll", () => {
+    // Control de la opacidad del logo en función del desplazamiento vertical
     if (window.scrollY < 103) {
-        logoChico.style.opacity = 0;
+        logoChico.style.opacity = 0; // Si el scroll es menor a 103, establece la opacidad del logo chico en 0
     }
     if (window.scrollY > 103) {
-        logoChico.style.opacity = window.scrollY / 400;
+        logoChico.style.opacity = window.scrollY / 400; // Ajusta la opacidad del logo chico en función del desplazamiento
     }
+    // Control de la opacidad y escala del logo grande en función del desplazamiento
     logoGrande.style.opacity = 1 - window.scrollY / 120;
     const scaleValue = Math.max(1 - window.scrollY / 200, 0.0);
-    logoGrande.style.scale = scaleValue;
+    logoGrande.style.scale = scaleValue; // Ajusta la escala del logo grande
 });
 
 //Punto 6 
 window.addEventListener('scroll', function () {
-    var duendeVerde = document.getElementById('duende');
-    var initialPosition = 600; // Posición inicial del duende
-    var targetPosition = 768; // Posición a la que quieres que el duende llegue al hacer scroll
-    var scrollSpeed = 0.3; // Puedes ajustar esta velocidad
+    var duende = document.getElementById('duende');
+    var posicionInicial = 600; // Posición inicial del duende
+    var posicionFinal = 768; // Posición a la que el duende debe llegue al hacer scroll
+    var velocidadScroll = 0.3; // Velocidad
 
     // Calcula la distancia que se ha desplazado desde la posición inicial
-    var distance = window.scrollY - initialPosition;
+    var distancia = window.scrollY - posicionInicial;
 
-    // Calcula la distancia máxima permitida para el desplazamiento
-    var maxDistance = targetPosition - initialPosition;
-
-    // Calcula la nueva posición del duende verde en función del scroll
-    var newPosition = Math.min(distance * scrollSpeed + initialPosition, targetPosition);
+    // Calcula la nueva posición del duende en función del scroll
+    var nuevaPosicion = Math.min(distancia * velocidadScroll + posicionInicial, posicionFinal);
 
     // Limita la posición para que no se pase de la posición final
-    newPosition = Math.max(newPosition, initialPosition);
+    nuevaPosicion = Math.max(nuevaPosicion, posicionInicial);
 
-    // Aplica la nueva posición al duende verde utilizando la propiedad top
-    duendeVerde.style.top = newPosition + 'px';
+    // Aplica la nueva posición al duende utilizando la propiedad top
+    duende.style.top = nuevaPosicion + 'px';
 });
 
 //Punto 7
+//Animacion de entrada
 const logo = document.getElementById('titulo');
 const layer2 = document.getElementById('layer2');
 const layer3 = document.getElementById('layer3');
@@ -84,28 +85,31 @@ const cargarElem = () => {
     layers.forEach((c, index) => {
         c.style.transition = `opacity 0.5s ease ${index * 0.2}s`; // Ajusta la duración y el retraso de la transición
         c.style.opacity = '1';
-        c.classList.add('animacion-entrada');
+        c.classList.add('animacion-entrada'); //Activa la animación
     });
     setTimeout(() => { logo.style.transition = `` }, 1000);
 };
-// Llama a la función después de 1 segundo
+// Llama a la función después de 5 segundos (para que ocurra despúes del loader)
 setTimeout(cargarElem, 5000);
 
-
+//Parallax
+//Definimos 2 arreglos distintos ya que los spidermans se moveran hacia arriba y el fondo hacia abajo
 const layersSpidey = [logo, gwen, spidey, miles, tela, tela2];
 const layersEdificios = [layer2, layer3, layer4];
 
 window.addEventListener('scroll', () => {
     layersSpidey.forEach((s) => {
-        const speed = s.getAttribute('data-speed');
+        const speed = s.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
         s.style.transform = `translateY(-${window.scrollY * speed}px)`;
+        // Mueve el elemento hacia arriba o hacia abajo dependiendo del valor de la velocidad y del desplazamiento vertical de la ventana.
+        //En este caso, hacia arriba
     });
 });
 
 window.addEventListener('scroll', () => {
     layersEdificios.forEach((e) => {
-        const speed = e.getAttribute('data-speed');
-        e.style.transform = `translateY(${window.scrollY * speed}px)`;
+        const speed = e.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
+        e.style.transform = `translateY(${window.scrollY * speed}px)`; //Mueve los elementos hacia abajo
     });
 });
 
@@ -144,7 +148,10 @@ const c3 = document.querySelector("#ruta3");
 window.addEventListener("scroll", function () {
     const pos = c1.getBoundingClientRect(); //devuelve la posicion
     const desplazamiento = window.scrollY;
+    // Verifica si parte de las cards están dentro del área visible de la ventana
     if (pos.top < window.innerHeight && pos.bottom > 0) {
+        // Aplica transformaciones a las cards solo si están visibles en la ventana
+        // Mueve las cards en el eje Y y las rota con un valor proporcional al desplazamiento vertical y la posición de cada una en la ventana
         c1.style.transform = `translateY(${(desplazamiento - pos.top) * 0.027
             }px) rotate(-13.078deg)`;
         c2.style.transform = `translateY(${(desplazamiento - pos.top) * 0.027
@@ -155,12 +162,12 @@ window.addEventListener("scroll", function () {
 });
 
 
-document.querySelector('.imagenSonido').addEventListener('click', function() {
+document.querySelector('.imagenSonido').addEventListener('click', function () {
     reproducirSonido('../images/videoplayback.weba');
-  });
-  
-  function reproducirSonido(rutaSonido) {
+});
+
+function reproducirSonido(rutaSonido) {
     var audio = document.getElementById('audio');
     audio.src = rutaSonido;
     audio.play();
-  }
+}
