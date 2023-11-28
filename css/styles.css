@@ -165,7 +165,7 @@ body {
 
 .parallax {
     position: relative;
-    height: 100vh;
+    height: 850px;
     overflow: hidden;
 }
 
@@ -214,13 +214,13 @@ body {
 }
 
 #layer3 {
-    top: 55%;
+    top: 60%;
     left: 30%;
     z-index: 2;
 }
 
 #layer4 {
-    top: 2%;
+    top: 0%;
     left: 70%;
     z-index: 2;
 }
@@ -235,31 +235,31 @@ body {
 
 /*Spidermans*/
 #gwen {
-    top: 28.6%;
+    top: 31.6%;
     left: 7%;
     z-index: 3;
 }
 
 #spidey {
-    top: 31%;
+    top: 34%;
     left: 31.5%;
     z-index: 3;
 }
 
 #miles {
-    top: 25%;
+    top: 26%;
     left: 54.2%;
     z-index: 2;
 }
 
 /*Telarañas*/
 #tela {
-    top: 28%;
+    top: 31%;
     z-index: 3;
 }
 
 #tela2 {
-    top: 31%;
+    top: 32%;
     left: 76.7%;
     z-index: 3;
 }

@@ -71,6 +71,7 @@ window.addEventListener('scroll', function () {
 //Punto 7
 //Animacion de entrada
 const logo = document.getElementById('titulo');
+const layer1 = document.getElementById('layer1');
 const layer2 = document.getElementById('layer2');
 const layer3 = document.getElementById('layer3');
 const layer4 = document.getElementById('layer4');
@@ -100,6 +101,8 @@ window.addEventListener('scroll', () => {
     layersSpidey.forEach((s) => {
         let speed = s.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
         s.style.transform = `translateY(-${window.scrollY * speed}px)`;
+        let speedCielo = layer1.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
+        layer1.style.transform = `translateY(${window.scrollY * speedCielo}px)`;        
         let speedGwen = gwen.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
         gwen.style.transform = `translate(-${window.scrollY * speedGwen}px,-${window.scrollY * speedGwen}px)`;
         let speedMiles = miles.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
