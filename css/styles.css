@@ -557,15 +557,15 @@ body {
 
 /*Segunda parte con fondo negro*/
 .tituloYBoton {
-    position: relative;
-    top: 614%;
+    width: 60%;
+    position: absolute;
+    top: 730%;
     left: 8%;
     color: white;
     font-size: 60px;
 }
 
 .tituloYBoton h1 {
-    width: 66%;
     margin: 0;
     color: white;
     font-weight: 400px;
@@ -573,8 +573,8 @@ body {
 }
 
 .tituloYBoton .boton {
-    width: 24.5%;
-    height: 60px;
+    width: 308px;
+    height: 66px;
 }
 
 /*Tercera parte con fondo blanco*/
@@ -586,8 +586,9 @@ body {
 /*Otras capas de spidermans*/
 .personajes {
     display: flex;
-    position: relative;
-    top: 636%;
+    position: absolute;
+    width: 1280px;
+    top: 782%;
 }
 
 
@@ -761,7 +762,7 @@ body {
     position: absolute;
     width: 132.3px;
     height: 170px;
-    background-image: url('/images/spritesheet/milesmorones.png');
+    background-image: url('../images/spritesheet/milesmorones.png');
     transition: background-position 0.5s steps(6) infinite;
 }
 
@@ -788,68 +789,3 @@ body {
 
     /* Ajusta esta posición según el tamaño del frame */
 }
-
-
-
-/* Menu Hamburguesa */
-
-
-/* .menuHamburguesa {
-    overflow: hidden;
-    transition: 500ms;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    background-color: #4c95fb;
-    position: fixed;
-    left: 0;
-    top: 120px;
-    width: 0;
-    height: calc(100vh - 120px);
-    z-index: 100;
-}
-
-.menuHamburguesaAbierto {
-    width: 175px;
-}
-
-
-.menuHamburguesa h4 {
-    transition: 500ms;
-    opacity: 0;
-    margin: auto;
-}
-
-.menuHamburguesa:hover h4 {
-    opacity: 1;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.botonHamburguesa {
-    cursor: pointer;
-    padding: 0 10px 0 5px;
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-}
-
-.botonHamburguesa:hover>h4 {
-    transform: translateX(10px);
-}
-
-.hamburguesaArriba {
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-}
-
-.hamburguesaArriba:hover {
-    overflow-y: scroll;
-    overflow-x: hidden;
-} */

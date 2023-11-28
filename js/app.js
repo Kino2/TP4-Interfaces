@@ -9,7 +9,6 @@ document.addEventListener("scroll", () => {
             s.classList.remove("active");
         });
     }
-    console.log(window.scrollY);
     if (window.scrollY < 4000) {
         clean();
         document.querySelector("#demoImg1").classList.add("active");
