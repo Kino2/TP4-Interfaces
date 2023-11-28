@@ -1,7 +1,6 @@
 //Punto 4
 /*Controla que mostrar o esconder dependiendo de la posicion del scroll en la pagina*/
 document.addEventListener("scroll", () => {
-    console.log(window.scrollY);
     function clean() {
         document.querySelectorAll(".demoImg").forEach((s) => {
             s.classList.remove("active");
@@ -10,6 +9,7 @@ document.addEventListener("scroll", () => {
             s.classList.remove("active");
         });
     }
+    console.log(window.scrollY);
     if (window.scrollY < 4000) {
         clean();
         document.querySelector("#demoImg1").classList.add("active");
@@ -20,12 +20,12 @@ document.addEventListener("scroll", () => {
         document.querySelector("#demoImg2").classList.add("active");
         document.querySelector("#info2").classList.add("active");
     }
-    if (window.scrollY > 4500 && window.screenY < 5000) {
+    if (window.scrollY > 4500 && window.screenY < 4900) {
         clean();
         document.querySelector("#demoImg3").classList.add("active");
         document.querySelector("#info3").classList.add("active");
     }
-    if (window.scrollY > 5000) {
+    if (window.scrollY > 4900) {
         clean();
         document.querySelector("#demoImg4").classList.add("active");
         document.querySelector("#info4").classList.add("active");
@@ -52,8 +52,8 @@ document.addEventListener("scroll", () => {
 //Punto 6 
 window.addEventListener('scroll', function () {
     var duende = document.getElementById('duende');
-    var posicionInicial = 600; // Posición inicial del duende
-    var posicionFinal = 768; // Posición a la que el duende debe llegue al hacer scroll
+    var posicionInicial = 638; // Posición inicial del duende
+    var posicionFinal = 797; // Posición a la que el duende debe llegue al hacer scroll
     var velocidadScroll = 0.3; // Velocidad
 
     // Calcula la distancia que se ha desplazado desde la posición inicial
@@ -99,11 +99,17 @@ const layersEdificios = [layer2, layer3, layer4];
 
 window.addEventListener('scroll', () => {
     layersSpidey.forEach((s) => {
-        const speed = s.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
+        let speed = s.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
         s.style.transform = `translateY(-${window.scrollY * speed}px)`;
+        let speedGwen = gwen.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
+        gwen.style.transform = `translate(-${window.scrollY * speedGwen}px,-${window.scrollY * speedGwen}px)`;
+        let speedMiles = miles.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
+        miles.style.transform = `translate(${window.scrollY * speedMiles}px,-${window.scrollY * speedMiles}px)`;
+        let speedTela2 = tela2.getAttribute('data-speed'); // Obtiene la velocidad de desplazamiento
+        tela2.style.transform = `translate(${window.scrollY * speedTela2}px,-${window.scrollY * speedTela2}px)`;
         // Mueve el elemento hacia arriba o hacia abajo dependiendo del valor de la velocidad y del desplazamiento vertical de la ventana.
         //En este caso, hacia arriba
-    });
+    })
 });
 
 window.addEventListener('scroll', () => {
@@ -129,19 +135,6 @@ document.addEventListener("scroll", () => {
 
 
 //Punto 11
-// const rutas = document.querySelector(".rutas");
-// const c1 = document.querySelector("#ruta1");
-// const c2 = document.querySelector("#ruta2");
-// const c3 = document.querySelector("#ruta3");
-// window.addEventListener("scroll", function () {
-//     const pos = rutas.getBoundingClientRect(); //devuelve la posicion
-//     const desplazamiento = window.scrollY;
-//     if (pos.top < window.innerHeight && pos.bottom > 0) {
-//       c1.style.transform = `translateY(${269}%) rotate(-13.078deg)`;
-//       c2.style.transform = `translateY(${286}%) rotate(-26.474deg)`;
-//       c3.style.transform = `translateY(${309.5}%) rotate(-36.016deg)`;
-//     }
-//   });
 const c1 = document.querySelector("#ruta1");
 const c2 = document.querySelector("#ruta2");
 const c3 = document.querySelector("#ruta3");
@@ -150,20 +143,18 @@ window.addEventListener("scroll", function () {
     const desplazamiento = window.scrollY;
     // Verifica si parte de las cards están dentro del área visible de la ventana
     if (pos.top < window.innerHeight && pos.bottom > 0) {
+        let valorInicial = -44
         // Aplica transformaciones a las cards solo si están visibles en la ventana
         // Mueve las cards en el eje Y y las rota con un valor proporcional al desplazamiento vertical y la posición de cada una en la ventana
-        c1.style.transform = `translateY(${(desplazamiento - pos.top) * 0.027
-            }px) rotate(-13.078deg)`;
-        c2.style.transform = `translateY(${(desplazamiento - pos.top) * 0.027
-            }px) rotate(-26.474deg)`;
-        c3.style.transform = `translateY(${(desplazamiento - pos.top) * 0.007
-            }px) rotate(-36.016deg)`;
+        c1.style.transform = `translateY(${valorInicial + ((desplazamiento - pos.top) * 0.027)}px) rotate(-13.078deg)`;
+        c2.style.transform = `translateY(${valorInicial + ((desplazamiento - pos.top) * 0.027)}px) rotate(-26.474deg)`;
+        c3.style.transform = `translateY(${valorInicial + ((desplazamiento - pos.top) * 0.027)}px) rotate(-36.016deg)`;
     }
 });
 
 
 document.querySelector('.imagenSonido').addEventListener('click', function () {
-    reproducirSonido('../images/videoplayback.weba');
+    reproducirSonido('../audio/videoplayback.weba');
 });
 
 function reproducirSonido(rutaSonido) {
@@ -171,3 +162,5 @@ function reproducirSonido(rutaSonido) {
     audio.src = rutaSonido;
     audio.play();
 }
+
+

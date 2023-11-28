@@ -1,4 +1,5 @@
 //Opcional 1
+
 window.addEventListener('load', function () {
     const loadingContainer = document.querySelector(".loading-container");
     const loadingProgress = document.getElementById("loading-progress");
@@ -70,11 +71,10 @@ function parallaxVengadores(e) {
     cielo.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.01 + 'px, ' + desplazamientoY * 0.01 + 'px, 0px)');
     pasto.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.01 + 'px, ' + desplazamientoY * 0.01 + 'px, 0px)');
     paisaje.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.01 + 'px, ' + desplazamientoY * 0.01 + 'px, 0px)');
-    vengador1.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.04 + 'px, ' + desplazamientoY * 0.04 + 'px, 0px)');
-    vengador2.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.05 + 'px, ' + desplazamientoY * 0.05 + 'px, 0px)');
-    vengador3.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.06 + 'px, ' + desplazamientoY * 0.06 + 'px, 0px)');
+    vengador1.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.04 + 'px, ' + desplazamientoY * 0.04 + 'px, 0px) rotate(-12.483deg)');
+    vengador2.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.05 + 'px, ' + desplazamientoY * 0.05 + 'px, 0px) rotate(13.615deg)');
+    vengador3.setAttribute('style', 'transform: translate3d( ' + desplazamientoX * 0.06 + 'px, ' + desplazamientoY * 0.06 + 'px, 0px) rotate(7.515deg)');
 }
-
 
 //Opcional 5
 const fondo = document.getElementById('secBlanco3')
@@ -85,29 +85,29 @@ const miles2 = document.querySelector('.miles2');
 //Además cada uno tiene su propio fondo cuando se pasa el mouse por encima
 gwen2.addEventListener('mouseover', function () {
     fondo.src = "images/fondos/FondoGwen.png"; //Cambio de fondo
-    gwen2.style.transform = 'scale(1.2)'; //Agranda personaje
+    gwen2.style.transform = 'scale(1.45) translate(-15px, 12px)'; //Agranda personaje
     gwen2.style.filter = 'blur(0)'; //No se le aplica desenfoque
-    spidey2.style.transform = 'scale(0.7)'; //Achica al personaje
+    spidey2.style.transform = 'scale(0.7) translate(140px, -10px)'; //Achica al personaje
     spidey2.style.filter = 'blur(5px)'; //Se le aplica un desenfoque
     miles2.style.transform = 'scale(0.7)'; //Achica al personaje
     miles2.style.filter = 'blur(5px)'; //Se le aplica un desenfoque
 });
 spidey2.addEventListener('mouseover', function () {
     fondo.src = "images/fondos/FondoSpidey.png";
-    spidey2.style.transform = 'scale(1.2)';
+    spidey2.style.transform = 'scale(1.50) translate(0, 20px)';
     spidey2.style.filter = 'blur(0)';
-    gwen2.style.transform = 'scale(0.7)';
+    gwen2.style.transform = 'scale(0.7) translate(-55px, 90px)';
     gwen2.style.filter = 'blur(5px)';
-    miles2.style.transform = 'scale(0.7)';
+    miles2.style.transform = 'scale(0.7) translate(60px, 130px)';
     miles2.style.filter = 'blur(5px)';
 });
 miles2.addEventListener('mouseover', function () {
     fondo.src = "images/fondos/FondoMiles.png";
-    miles2.style.transform = 'scale(1.2)';
+    miles2.style.transform = 'scale(1.6) translate(0px, 0px)';
     miles2.style.filter = 'blur(0)';
     spidey2.style.transform = 'scale(0.7)';
     spidey2.style.filter = 'blur(5px)';
-    gwen2.style.transform = 'scale(0.7)';
+    gwen2.style.transform = 'scale(0.7) translate(100px, 0px)';
     gwen2.style.filter = 'blur(5px)';
 
 });

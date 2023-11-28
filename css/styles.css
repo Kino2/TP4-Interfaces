@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-
 /*Estilos generales para el cuerpo de la página*/
 body {
     max-width: 1280px;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
     background-color: black;
     overflow-x: hidden;
     margin: 0 auto;
 }
+
 .loading-container {
     display: flex;
     flex-direction: column;
@@ -39,13 +38,14 @@ body {
 
 @keyframes spinSide {
     from {
-      transform: rotateY(0deg);
+        transform: rotateY(0deg);
     }
+
     to {
-      transform: rotateY(360deg);
+        transform: rotateY(360deg);
     }
-  }
-  
+}
+
 
 /*Barra de navegación*/
 
@@ -56,7 +56,7 @@ body {
     top: 0;
     width: 1280px;
     height: 120px;
-    background: #4c95fb;
+    background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);;
     z-index: 2000;
     transition: top 0.3s ease;
 }
@@ -66,10 +66,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
+    margin: auto auto 32px auto;
 }
 
-.navbarContainer > * {
+.navbarContainer>* {
     flex: 1;
 }
 
@@ -78,37 +78,49 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.navbarMedio .logo{
+    transform: translateY(3px);
+}
 .navbarDerecha {
     display: flex;
     justify-content: end;
 }
+
+
 /*Botón hamburguesa*/
- .hamburguesa {
-    width: 70px;
-    height: 42px;
+.hamburguesa {
+    width: 46px;
+    height: 39px;
     flex-shrink: 0;
     cursor: pointer;
 }
+
 .hamburguesa rect {
     transition: all 0.4s ease;
     transform-origin: center;
 }
+
 /* Estilo para la animación de cruz */
 .hamburguesa.cruz #barra1 {
     transform: rotate(45deg) translate(0.5px, 10px);
 }
+
 .hamburguesa.cruz #barra2 {
     transition: 0.1s ease;
     opacity: 0;
     stroke-opacity: 0;
 }
+
 .hamburguesa.cruz #barra3 {
     transform: rotate(-45deg) translate(6px, -10px);
 }
+
 .ocultar {
-    opacity: 0; 
-    pointer-events: none; /* Desactiva eventos en la hamburguesa para que no sea clickeable */
+    opacity: 0;
+    pointer-events: none;
 }
+
 /*Boton de Comprar*/
 .boton {
     width: 200px;
@@ -120,16 +132,20 @@ body {
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
 }
-.btnAnimado{
+
+.btnAnimado {
     transition: all 0.3s ease;
 }
-.btnAnimado:hover{
+
+.btnAnimado:hover {
     background-color: #fff200;
     transform: scale(1.02);
 }
-.btnAnimado h4:hover{
+
+.btnAnimado h4:hover {
     color: blue;
 }
+
 .boton h4 {
     margin: auto;
     color: #02187E;
@@ -146,16 +162,26 @@ body {
     height: 799px;
     position: relative;
 }
-.layerInicial{
-    position: absolute;  
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
+
+.layerInicial {
+    position: absolute;
+}
+
 .layer {
     position: absolute;
-    
+
 }
-.invisible{
+
+.invisible {
     opacity: 0;
 }
+
 .animacion-entrada {
     animation: aparecer 1s cubic-bezier(0.42, 0, 0.58, 1);
     /* Otras propiedades de estilo para la entrada */
@@ -167,32 +193,34 @@ body {
         transform: translateX(-50px);
         /* Otras propiedades de inicio */
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
         /* Otras propiedades para cuando está completamente visible */
     }
 }
+
 /*Edificios*/
 #layer1 {
     width: 1280px;
-    height: 780px;
+    top: 0%;
     z-index: 1;
 }
 
 #layer2 {
-    top: -0.3%;
+    top: 2%;
     z-index: 2;
 }
 
 #layer3 {
-    top: 59.8%;
+    top: 55%;
     left: 30%;
     z-index: 2;
 }
 
 #layer4 {
-    top: -4%;
+    top: 2%;
     left: 70%;
     z-index: 2;
 }
@@ -200,26 +228,27 @@ body {
 /*Logo del juego*/
 #titulo {
     width: 520px;
+    top: -1%;
     right: 31%;
     z-index: 3;
 }
 
 /*Spidermans*/
 #gwen {
-    top: 30%;
+    top: 28.6%;
     left: 7%;
     z-index: 3;
 }
 
 #spidey {
     top: 31%;
-    left: 32%;
+    left: 31.5%;
     z-index: 3;
 }
 
 #miles {
-    top: 23%;
-    left: 55%;
+    top: 25%;
+    left: 54.2%;
     z-index: 2;
 }
 
@@ -230,11 +259,11 @@ body {
 }
 
 #tela2 {
-    width: 23%;
-    top: 29.5%;
-    left: 77.1%;
+    top: 31%;
+    left: 76.7%;
     z-index: 3;
 }
+
 .fondoVioleta {
     max-width: 1280px;
 }
@@ -242,14 +271,14 @@ body {
 /*Parte con fondo violeta*/
 #secVioleta {
     width: 1280px;
-    top: 78%;
+    top: 83%;
     z-index: 2;
 }
 
 .titulo {
     color: white;
     width: 47%;
-    top: 104%;
+    top: 109%;
     left: 8%;
     z-index: 3;
 }
@@ -257,6 +286,8 @@ body {
 .titulo h1 {
     font-size: 60px;
     margin: auto;
+    font-weight: 500;
+    line-height: 94.5%;
 }
 
 .titulo p {
@@ -266,71 +297,82 @@ body {
 
 
 #juego1 {
-    top: 144%;
+    top: 148%;
     left: 7.3%;
     z-index: 3;
 }
 
 #duende {
     top: 600px;
-    left: 57%;
+    left: 56.5%;
     z-index: 4;
 }
 
 /*Parte con fondo blanco*/
 #secBlanco {
     width: 100%;
-    top: 167%;
+    top: 172%;
     z-index: 1;
 }
 
 .contenedorRecuadros {
     display: flex;
-    top: 213%;
-    left: 5.2%;
+    top: 218%;
+    left: 6.3%;
     z-index: 2;
 }
 
 .descripcion {
     display: flex;
     width: 26.2%;
-    margin: 0px 33px;
+    margin: 0px 29px;
     flex-direction: column;
-    opacity: 0; /* Comienza oculto */
-    transform: translateY(20px); /* Desplazado hacia abajo */
+    opacity: 0;
+    /* Comienza oculto */
+    transform: translateY(20px);
+    /* Desplazado hacia abajo */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+.descripcion img {
+    width: 332.96px;
+    height: 302.691px;
+}
+
 .descripcion.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 .descripcion p {
     font-size: 18.3px;
 }
-#card1{
+
+#card1 {
     transition-delay: 0s;
 }
-#card2{
+
+#card2 {
     transition-delay: 0.2s;
 }
-#card3{
+
+#card3 {
     transition-delay: 0.4s;
 }
+
 .animacionCard {
     opacity: 1;
     transform: translate(0px, 0px);
-  }
+}
 
 /*Parte con fondo de Gwen*/
 #rectGwen {
     z-index: 4;
-    top: 289%;
-}
-.rutas {
-    left: 2%;
+    top: 294%;
 }
 
-.cardRuta{
+
+.cardRuta {
     width: 546px;
     height: 326px;
     position: absolute;
@@ -338,53 +380,54 @@ body {
     transition: all 0.2s ease-in;
     z-index: 5;
 }
+
 .cardRuta:hover {
     cursor: pointer;
     scale: 1.1;
     z-index: 10;
-  }
+}
 
 #ruta1 {
     transform: rotate(-13.078deg);
-    top: 275%;
-    left: 3.7%;
+    top: 280%;
+    left: 6.7%;
 
 }
 
 #ruta2 {
     transform: rotate(-26.474deg);
-    top: 298%;
-    left: 2.8%;
+    top: 303%;
+    left: 5.8%;
 
 }
 
 #ruta3 {
     transform: rotate(-36.016deg);
-    top: 325%;
-    left: 5.4%;
+    top: 330%;
+    left: 8.4%;
 
 }
 
 /*Parte con fondo negro*/
 #secNegro {
-    top: 348%;
+    top: 353%;
     z-index: 3;
 }
 
 /*Contenedor de la seccion de vengadores*/
 .fondoPaisaje {
-    top: 401%;
+    top: 406%;
     left: 8%;
 }
 
 #titVengadores {
     width: 38%;
-    top: 374%;
+    top: 379%;
     left: 8%;
     color: #FFF;
     font-size: 50px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 94.5%;
     z-index: 3;
 }
@@ -405,30 +448,36 @@ body {
 
 /*Capas de los vengadores*/
 .vengadores {
-    top: 400%;
+    top: 405%;
 }
 
 #vengador1 {
-    top: -94px;
-    left: 26px;
+    width: 451px;
+    height: 591px;
+    top: -66px;
+    left: 71px;
     z-index: 3;
 }
 
 #vengador2 {
-    top: -256px;
-    left: 446px;
+    width: 368px;
+    aspect-ratio: 733 / 923;
+    top: -196px;
+    left: 481px;
     z-index: 3;
 }
 
 #vengador3 {
-    top: 104px;
-    left: 670px;
+    width: 410px;
+    height: 438px;
+    top: 115px;
+    left: 702px;
     z-index: 3;
 }
 
 /*Segunda parte con fondo blanco*/
 #secBlanco2 {
-    top: 448%;
+    top: 453%;
     z-index: 2;
 }
 
@@ -436,7 +485,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     padding: 0 100px;
-    top: 480%;
+    top: 485%;
     z-index: 4;
 }
 
@@ -449,24 +498,24 @@ body {
     grid-template-columns: auto 1fr;
 }
 
-.demoImgsContainer{
+.demoImgsContainer {
     width: 552px;
     height: 1650px;
     display: flex;
     flex-direction: column;
     position: absolute;
-  
+
 }
 
 .demoImgs {
     width: 100%;
     height: 302px;
     position: sticky;
-    top: 35%;
+    top: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
 }
 
 .demoImgs img {
@@ -480,12 +529,12 @@ body {
     position: relative;
     left: 601px;
     width: 467px;
-    height: 1650px;
+    height: 1605px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
-  
+
 }
 
 .demoInfos .info {
@@ -501,6 +550,7 @@ body {
 }
 
 .info p {
+    line-height: 94.5%;
     font-size: 20px;
     margin-bottom: 0;
 }
@@ -508,16 +558,17 @@ body {
 /*Segunda parte con fondo negro*/
 .tituloYBoton {
     position: relative;
-    top: 727%;
+    top: 614%;
     left: 8%;
     color: white;
     font-size: 60px;
 }
 
 .tituloYBoton h1 {
+    width: 66%;
     margin: 0;
     color: white;
-    width: 66%;
+    font-weight: 400px;
     font-size: 60px;
 }
 
@@ -528,7 +579,7 @@ body {
 
 /*Tercera parte con fondo blanco*/
 #secBlanco3 {
-    top: 753%;
+    top: 758%;
     z-index: 1;
 }
 
@@ -536,19 +587,24 @@ body {
 .personajes {
     display: flex;
     position: relative;
-    top: 751%;
+    top: 636%;
+}
+
+
+.spidey2 {
+    left: 32%;
+}
+
+.miles2 {
+    left: 62%;
+}
+
+.gwen2 {
     left: 17%;
 }
-
-
-.spidey2{
-    left: 15%;
-}
-.miles2{
-    left: 45%;
-}
-
-.gwen2, .spidey2, .miles2 {
+.gwen2,
+.spidey2,
+.miles2 {
     cursor: pointer;
     z-index: 3;
     transition: all 0.3s ease;
@@ -559,7 +615,7 @@ body {
     width: 1280px;
     height: 1488px;
     background: linear-gradient(0deg, #F7E3D8 21.2%, #8FBEFC 81.48%);
-    top: 843%;
+    top: 848%;
 }
 
 .title {
@@ -626,7 +682,7 @@ body {
 
 .advertencias img {
     width: 19%;
-    margin-top: 2%;
+    margin-top: 3%;
     margin-left: 23.4%;
 }
 
@@ -641,7 +697,7 @@ body {
 
 /*Capas de spidermans en 2D*/
 #miles2D {
-    top: 89.3%;
+    top: 87.3%;
     left: 12.3%;
 }
 
@@ -655,7 +711,7 @@ body {
     right: 15%;
 }
 
-.imagenSonido{
+.imagenSonido {
     cursor: pointer;
 }
 
@@ -681,7 +737,7 @@ body {
     letter-spacing: 3px;
     font-size: 18px;
     left: 8%;
-    top: 106%;
+    top: 107%;
     color: white;
 }
 
@@ -693,6 +749,7 @@ body {
 .inactive {
     opacity: 0;
 }
+
 .active {
     opacity: 1;
 }
@@ -704,22 +761,95 @@ body {
     position: absolute;
     width: 132.3px;
     height: 170px;
-    background-image: url('/images/milesmorones.png');
+    background-image: url('/images/spritesheet/milesmorones.png');
     transition: background-position 0.5s steps(6) infinite;
-  }
-  
-  /* Animación al pasar el mouse */
-  .personaje:hover {
+}
+
+/* Animación al pasar el mouse */
+.personaje:hover {
     animation-name: animacionHover;
     animation-timing-function: steps(6);
-    animation-duration: 1s; /* Reduce la duración para hacer la animación más rápida */
+    animation-duration: 1s;
+    /* Reduce la duración para hacer la animación más rápida */
     animation-iteration-count: infinite;
     cursor: pointer;
-  }
-  
-  /* Keyframes */
-  @keyframes animacionHover {
-    0% { background-position: -9px; } /* posición inicial del spritesheet */
-    100% { background-position: -818px; } /* Ajusta esta posición según el tamaño del frame */
-  }
-  
+}
+
+/* Keyframes */
+@keyframes animacionHover {
+    0% {
+        background-position: -9px;
+    }
+
+    /* posición inicial del spritesheet */
+    100% {
+        background-position: -818px;
+    }
+
+    /* Ajusta esta posición según el tamaño del frame */
+}
+
+
+
+/* Menu Hamburguesa */
+
+
+/* .menuHamburguesa {
+    overflow: hidden;
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #4c95fb;
+    position: fixed;
+    left: 0;
+    top: 120px;
+    width: 0;
+    height: calc(100vh - 120px);
+    z-index: 100;
+}
+
+.menuHamburguesaAbierto {
+    width: 175px;
+}
+
+
+.menuHamburguesa h4 {
+    transition: 500ms;
+    opacity: 0;
+    margin: auto;
+}
+
+.menuHamburguesa:hover h4 {
+    opacity: 1;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.botonHamburguesa {
+    cursor: pointer;
+    padding: 0 10px 0 5px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.botonHamburguesa:hover>h4 {
+    transform: translateX(10px);
+}
+
+.hamburguesaArriba {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hamburguesaArriba:hover {
+    overflow-y: scroll;
+    overflow-x: hidden;
+} */
