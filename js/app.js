@@ -156,7 +156,7 @@ window.addEventListener("scroll", function () {
 
 
 document.querySelector('.imagenSonido').addEventListener('click', function () {
-    reproducirSonido('../audio/videoplayback.mp3');
+    reproducirSonido('audio/videoplayback.mp3');
 });
 
 function reproducirSonido(rutaSonido) {
